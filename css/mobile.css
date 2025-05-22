@@ -1,0 +1,67 @@
+/* --------------------------- Home pagina ---------------------------------- */
+
+.home {
+   text-align: center;
+
+   & .content {
+      text-align: left;
+   }
+}
+
+/* --------------------------- About ---------------------------------------- */
+
+
+
+/* --------------------------- Logboek pagina ------------------------------- */
+
+.logboek {
+
+   & li {
+      padding-block-end: 2rem;
+   }
+}
+
+/* ---------------------------- Documentatie -------------------------------- */
+
+.components_datasheets {
+   overflow-x: auto;
+
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+   }
+
+   thead {
+      background-color: #007acc;
+      color: white;
+   }
+
+   th,
+   td {
+      padding: 1rem 1rem;
+      border: 1px solid #211529;
+      text-align: left;
+   }
+
+   tbody tr:nth-child(even) {
+      background-color: #211529;
+   }
+
+   a {
+      color: #007acc;
+      text-decoration: none;
+   }
+
+   a:hover {
+      text-decoration: underline;
+   }
+}
+
+/* --------------------------- To-do-list ----------------------------------- */
+
+.to-do-list {
+   & ul {
+      list-style-type: none;
+   }
+}

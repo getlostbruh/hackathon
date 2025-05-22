@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="icon" type="image/png" href="./images/image.png">
+
+   <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./css/mobile.css">
+   <link rel="stylesheet" href="./css/style.css">
+
+   <title>Hackathon</title>
+</head>
+
+<body>
+   <header>
+      <div class="container">
+         <nav class="nav">
+
+            <!-- <a href="./"><img src="./images/home.png" width=50 alt="home"></a> -->
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"></label>
+
+            <ul class="nav-links">
+               <li><a href="./" class="active">Home</a></li>
+               <!-- <li><a href="./to-do-list/">To do list</a></li> -->
+               <li><a href="./about/">About</a></li>
+               <li><a href="./logboek/">Logboek</a></li>
+               <li><a href="./documentatie/">Documentatie</a></li>
+            </ul>
+            <div class="nav-overlay"></div>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <div class="container">
+         <section class="home">
+            <div>
+               <h1>Gyroschopisch Doolhof</h1>
+            </div>
+            <div class="content">
+               <p>Ons project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.
+                  De speler navigeert door het doolhof door het apparaat in verschillende richtingen te kantelen.</p>
+               <p>Het doolhof is volledig opgebouwd uit 4 16X16 Led Panelen die samen de muren, gangen en de pion (de
+                  speler) vormen.
+                  Onder het doolhof bevindt zich een LED-strip die fungeert als een voortgangsbalk. Deze visualiseert
+                  een timer van een vast aantal seconden en creëert zo een gevoel van tijdsdruk.</p>
+               <p>Bij het succesvol voltooien van een doolhof krijgt de speler een cijfer. Dit cijfer is onderdeel van
+                  een viercijferige code, die wordt weergegeven op een 7-segmentdisplay boven het doolhof.
+                  Na vier doolhoven heeft de speler de volledige code verzameld. Deze code wordt vervolgens gebruikt om
+                  verder te geraken in de escape room.</p>
+               <p>De juiste code wordt vooraf ingesteld door de organisator via een infrarood afstandsbediening, het
+                  volledige systeem draait op één enkele Arduino. Dit is niet alleen kostenefficiënt, maar zorgt er ook
+                  voor dat de volledige programmatie op één plek zit, wat de overzichtelijkheid ten goede komt.</p>
+               <div>
+                  <p>Daarnaast zijn er drie fysieke knoppen voorzien, elk met een unieke functie.</p>
+                  <ul>
+                     <li>Een slow-down knop die de timer vertraagt.</li>
+                     <li>Een start/stop knop om het spel te pauzeren of hervatten.</li>
+                     <li>Een random power-up knop die een willekeurige bonus activeert.</li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+      </div>
+   </main>
+   <footer>
+      <div class="container">
+         <ul>
+            <li>
+               <p>© 2024 - all rights go to US</p>
+            </li>
+         </ul>
+      </div>
+   </footer>
+</body>
+
+</html>

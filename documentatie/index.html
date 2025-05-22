@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="icon" type="image/png" href="../images/image.png">
+
+   <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/mobile.css">
+   <link rel="stylesheet" href="../css/style.css">
+
+   <title>Hackathon</title>
+</head>
+
+<body>
+   <header>
+      <div class="container">
+         <nav class="nav">
+
+            <!-- <a href="./"><img src="./images/home.png" width=50 alt="home"></a> -->
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"></label>
+
+            <ul class="nav-links">
+               <li><a href="../">Home</a></li>
+               <!-- <li><a href="../to-do-list/">To do list</a></li> -->
+               <li><a href="../about/">About</a></li>
+               <li><a href="../logboek/">Logboek</a></li>
+               <li><a href="../documentatie/" class="active">Documentatie</a></li>
+            </ul>
+            <div class="nav-overlay"></div>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <div class="container">
+         <section>
+            <div class="components_datasheets">
+               <table>
+                  <thead>
+                     <tr>
+                        <th>Component</th>
+                        <th>Quantity</th>
+                        <th>Description</th>
+                        <th>Datasheet / Link</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td data-label="Component">ATmega328 Uno Development Board</td>
+                        <td data-label="Quantity">1</td>
+                        <td data-label="Description">Main microcontroller board</td>
+                        <td data-label="Datasheet / Link"><a href="https://www.velleman.eu/products/view/?id=435594"
+                              target="_blank">Datasheet</a></td>
+                     </tr>
+                     <tr>
+                        <td data-label="Component">1838 IR infrared 37.9kHz receiver</td>
+                        <td data-label="Quantity">1</td>
+                        <td data-label="Description">Receives signals from IR remote</td>
+                        <td data-label="Datasheet / Link"><a href="https://www.velleman.eu/products/view/?id=435594"
+                              target="_blank">Datasheet</a></td>
+                     </tr>
+                     <tr>
+                        <td data-label="Component">Infrared Remote Control</td>
+                        <td data-label="Quantity">1</td>
+                        <td data-label="Description">Sends commands to system via IR</td>
+                        <td data-label="Datasheet / Link"><a href="https://www.velleman.eu/products/view/?id=435594"
+                              target="_blank">Product Info</a></td>
+                     </tr>
+                     <tr>
+                        <td data-label="Component">LEDs (assorted)</td>
+                        <td data-label="Quantity">5</td>
+                        <td data-label="Description">Used for visual indicators</td>
+                        <td data-label="Datasheet / Link"><a href="https://www.velleman.eu/products/view/?id=435594"
+                              target="_blank">Product Info</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+      </div>
+   </main>
+   <footer>
+      <div class="container">
+         <ul>
+            <li>
+               <p>© 2024 - all rights go to US</p>
+            </li>
+         </ul>
+      </div>
+   </footer>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+/*
+------------------ Algemene Settings --------------------------
+*/
+
+:root {}
+
+html {
+   font-size: 1rem;
+   scroll-behavior: smooth;
+   line-height: 1.6;
+   block-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+
+
+body {
+   font-family: Fredoka, sans-serif, serif;
+   line-height: 1.6;
+   color: #ffffff;
+   background-color: #0D1226;
+   block-size: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-inline: 0;
+   margin-block: 0;
+}
+
+main {
+   flex: 1;
+}
+
+
+/* 
+===============================
+   Typografie
+===============================
+ */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: 600;
+   line-height: 1.2;
+   margin-block: 2rem;
+}
+
+h1 {
+   font-size: 2.5rem;
+}
+
+h2 {
+   font-size: 2rem;
+}
+
+h3 {
+   font-size: 1.5rem;
+}
+
+h4 {
+   font-size: 1.25rem;
+}
+
+h5 {
+   font-size: 1rem;
+}
+
+h6 {
+   font-size: 0.875rem;
+}
+
+p {
+   font-size: 1rem;
+   margin-block: 1rem;
+}
+
+/* 
+===============================
+   Lijsten
+===============================
+ */
+
+ul,
+ol {
+   padding-left: 1.25rem;
+   margin-block: 1rem;
+}
+
+li {
+   margin-bottom: 0.5rem;
+}
+
+/* 
+===============================
+   Afbeeldingen
+===============================
+ */
+
+img {
+   max-width: 100%;
+   display: block;
+   height: auto;
+}
+
+
+/* 
+===============================
+   Links
+===============================
+ */
+
+a {
+   color: inherit;
+   text-decoration: underline;
+   transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+   color: #0077cc;
+}
+
+
+
+/*
+-------------- Algemene Settings Containers -------------------
+*/
+
+.container {
+   max-inline-size: 90rem;
+   margin-inline: auto;
+   padding-inline: 1rem;
+}
+
+/*
+-------------- Navigatie --------------------------------------
+*/
+
+header {
+   padding-block: 0.8rem;
+   position: sticky;
+   inset-block-start: 0;
+   z-index: 4;
+   background-color: #090e20; 
+   border-block-end: 1px solid #000000;
+
+   & nav {
+      display: flex;
+   }
+
+   /* & a:link {
+      align-self: center;
+
+      & img {
+         border-radius: 50%;
+      }
+   } */
+
+   & ul {
+
+      list-style-type: none;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      flex-grow: 3;
+
+      a {
+         text-decoration: none;
+         font-size: 1.5rem;
+         font-weight: bold;
+         color: white;
+
+
+         &:hover {
+            border-block-end: 2px solid #f5f5f5;
+            padding-block-end: 0.5rem;
+            color: rgb(112, 109, 109);
+            transition: 0.5s;
+         }
+
+         &.active {
+            border-block-end: 2px solid #f5f5f5;
+            padding-inline: 1rem;
+            padding-block-end: 0.5rem;
+         }
+      }
+   }
+
+   /* Hide checkbox */
+   .nav-toggle {
+      display: none;
+   }
+
+   /* Hamburger icon */
+   .nav-toggle-label {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding-inline-end: 1rem;
+      margin-inline-start: auto;
+   }
+
+   /* Navigation links default */
+   .nav-links {
+      list-style: none;
+      display: flex;
+      margin-inline: 0;
+      margin-block: 0;
+      padding-inline: 0;
+      padding-block: 0;
+      z-index: 3;
+
+   }
+
+   /* Toont hamburger and toggle de nav */
+   @media (max-width: 768px) {
+      .nav-links {
+         position: absolute;
+         inset-block-start: 100%;
+         inset-inline: 0;
+         flex-direction: column;
+         inline-size: 100%;
+         gap: 1.5rem;
+         background-color: #020617;
+         padding-inline: 1rem;
+         padding-block: 1rem;
+         transform: translateY(-1rem);
+         transition: opacity 0.4s ease, transform 0.4s ease;
+         pointer-events: none;
+         visibility: hidden;
+
+         & a {
+            display: block;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1.25rem;
+            text-align: left;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease;
+         }
+
+         & a:hover,
+         & a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-block-end: rgba(255, 255, 255, 0.1);
+         }
+
+      }
+
+      .nav-toggle-label {
+         z-index: 2;
+         display: block;
+
+      }
+
+      .nav-toggle:checked+.nav-toggle-label+.nav-links {
+         display: flex;
+         opacity: 1;
+         transform: translateY(0);
+         pointer-events: auto;
+         visibility: visible;
+      }
+
+      .nav-toggle-label::before {
+         content: "☰";
+         font-size: 2rem;
+         display: inline-block;
+         transition: transform 0.3s ease;
+         color: white;
+      }
+
+      /* Verander in een X wanneer checkbox aangevinkt is */
+      .nav-toggle:checked+.nav-toggle-label::before {
+         content: "✖";
+      }
+   }
+
+   .nav-overlay {
+      position: fixed;
+      inset-block: 0;
+      inset-inline: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+   }
+
+   .nav-toggle:checked~.nav-overlay {
+      display: block;
+      opacity: 1;
+      pointer-events: auto;
+   }
+}
+
+/*
+----------------- Footer --------------------------------------
+*/
+
+footer {
+   text-align: center;
+   padding-block: 1rem;
+   border-block-start: 1px solid #000000;
+   background-color: #090e20;
+
+   & ul {
+      list-style-type: none;
+      padding-inline-end: 2.5rem;
+   }
+}

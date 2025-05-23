@@ -31,6 +31,7 @@ body {
 
 main {
    flex: 1;
+   padding-top: 5rem;
 }
 
 
@@ -145,10 +146,12 @@ a:focus {
 
 header {
    padding-block: 0.8rem;
-   position: sticky;
+   position: fixed;
+   inset-inline-start: 0;
+   inset-inline-end: 0;
    inset-block-start: 0;
-   z-index: 4;
-   background-color: #090e20; 
+   z-index: 1;
+   background-color: #090e20;
    border-block-end: 1px solid #000000;
 
    & nav {
@@ -164,7 +167,6 @@ header {
    } */
 
    & ul {
-
       list-style-type: none;
       justify-content: center;
       gap: 3rem;
@@ -219,15 +221,15 @@ header {
 
    }
 
-   /* Toont hamburger and toggle de nav */
+   /* Toont hamburger and toggled de nav */
    @media (max-width: 768px) {
       .nav-links {
          position: absolute;
-         inset-block-start: 100%;
+         inset-block-start: 5.2rem;
          inset-inline: 0;
          flex-direction: column;
          inline-size: 100%;
-         gap: 1.5rem;
+         gap: 1rem;
          background-color: #020617;
          padding-inline: 1rem;
          padding-block: 1rem;
@@ -238,9 +240,10 @@ header {
 
          & a {
             display: block;
-            width: 100%;
-            padding: 0.75rem 1rem;
-            font-size: 1.25rem;
+            inline-size: 100%;
+            padding-inline: 1rem;
+            padding-block: 1rem;
+            font-size: 1.5rem;
             text-align: left;
             border-radius: 0.5rem;
             transition: background-color 0.2s ease;
@@ -255,10 +258,51 @@ header {
       }
 
       .nav-toggle-label {
+         width: 3rem;
+         height: 3rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         -webkit-tap-highlight-color: transparent;
+         background-color: #04091f;
+         border-radius: 0.5rem;
+         border: 1px solid #000000;
+         position: fixed;
+         inset-block-start: 2rem;
+         inset-inline-end: 1rem;
          z-index: 2;
-         display: block;
-
+         cursor: pointer;
+         padding: 0.5rem;
       }
+
+      /* Algemene stijl voor alle iconen */
+      .icon {
+         width: 2rem;
+         height: 2rem;
+         fill: none;
+         stroke: white;
+         stroke-width: 2;
+      }
+
+      /* Toon enkel het hamburgermenu bij default */
+      .icon-menu {
+         display: block;
+      }
+
+      /* Verberg standaard het sluit-icoon */
+      .icon-close {
+         display: none;
+      }
+
+      /* Toon 'close' en verberg 'menu' als de nav open is */
+      .nav-toggle:checked+.nav-toggle-label .icon-menu {
+         display: none;
+      }
+
+      .nav-toggle:checked+.nav-toggle-label .icon-close {
+         display: inline;
+      }
+
 
       .nav-toggle:checked+.nav-toggle-label+.nav-links {
          display: flex;
@@ -266,19 +310,6 @@ header {
          transform: translateY(0);
          pointer-events: auto;
          visibility: visible;
-      }
-
-      .nav-toggle-label::before {
-         content: "☰";
-         font-size: 2rem;
-         display: inline-block;
-         transition: transform 0.3s ease;
-         color: white;
-      }
-
-      /* Verander in een X wanneer checkbox aangevinkt is */
-      .nav-toggle:checked+.nav-toggle-label::before {
-         content: "✖";
       }
    }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
    <meta charset="UTF-8">
@@ -20,11 +20,11 @@
 <body>
    <header>
       <div class="container">
-         <nav class="nav">
+         <nav class="nav" aria-label="Primary Navigation">
 
             <!-- <a href="./"><img src="./images/home.png" width=50 alt="home"></a> -->
 
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
             <label for="nav-toggle" class="nav-toggle-label">
                <!-- Hamburger icon -->
                <svg class="icon icon-menu" viewBox="0 0 24 24" width="24" height="24">
@@ -37,9 +37,8 @@
                </svg>
             </label>
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-menu">
                <li><a href="../">Home</a></li>
-               <!-- <li><a href="../to-do-list/">To do list</a></li> -->
                <li><a href="../about/">About</a></li>
                <li><a href="../logboek/" class="active">Logboek</a></li>
                <li><a href="../documentatie/">Documentatie</a></li>

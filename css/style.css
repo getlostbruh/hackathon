@@ -126,6 +126,7 @@ a {
 a:hover,
 a:focus {
    color: #0077cc;
+   
 }
 
 
@@ -323,11 +324,10 @@ header {
       transition: opacity 0.3s ease;
       pointer-events: none;
       block-size: 100dvh;
-      block-size: 100vh;
+      
    }
 
    .nav-toggle:checked~.nav-overlay {
-      display: block;
       opacity: 1;
       pointer-events: auto;
    }

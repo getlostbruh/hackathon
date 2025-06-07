@@ -1,3 +1,6 @@
+
+
+// Navigation toggle logic
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector(".nav-toggle-btn");
   const nav = document.querySelector(".primary-menu");
@@ -17,20 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.classList.remove("open");
     toggleBtn.setAttribute("aria-expanded", false);
   });
-});
-
-const swiper = new Swiper(".mySwiper", {
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
 });

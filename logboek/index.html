@@ -20,28 +20,21 @@
 <body>
    <header>
       <div class="container">
-         <nav class="nav" aria-label="Primary Navigation">
-
-            <!-- <a href="./"><img src="./images/home.png" width=50 alt="home"></a> -->
-
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
-            <label for="nav-toggle" class="nav-toggle-label">
-               <!-- Hamburger icon -->
+         <nav aria-label="Primary Navigation">
+            <button class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+               aria-controls="primary-menu">
                <svg class="icon icon-menu" viewBox="0 0 24 24" width="24" height="24">
                   <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" />
                </svg>
-
-               <!-- Close (X) icon -->
                <svg class="icon icon-close" viewBox="0 0 24 24" width="24" height="24">
                   <path d="M6 6l12 12M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" />
                </svg>
-            </label>
-
-            <ul class="nav-links" id="primary-menu">
-               <li><a href="../">Home</a></li>
-               <li><a href="../about/">About</a></li>
-               <li><a href="../logboek/" class="active">Logboek</a></li>
-               <li><a href="../documentatie/">Documentatie</a></li>
+            </button>
+            <ul id="primary-menu" class="primary-menu">
+               <li><a href="../" class="primary-menu__link">Home</a></li>
+               <li><a href="../about/" class="primary-menu__link">About</a></li>
+               <li><a href="../logboek/" class="active primary-menu__link">Logboek</a></li>
+               <li><a href="../documentatie/" class="primary-menu__link">Documentatie</a></li>
             </ul>
             <div class="nav-overlay"></div>
          </nav>
@@ -107,6 +100,9 @@
                      <p>Box ontwerpen, metingen.</p>
                      <p>Website vervoledigen met informatie.</p>
                   </li>
+                  <li>
+                     <p>22/05/2025 Donderdag</p>
+                  </li>
                </ul>
             </div>
          </section>
@@ -116,11 +112,12 @@
       <div class="container">
          <ul>
             <li>
-               <p>© 2024 - all rights go to US</p>
+               <p>© 2025 - all rights go to US</p>
             </li>
          </ul>
       </div>
    </footer>
+   <script src="../js/main.js"></script>
 </body>
 
 </html>

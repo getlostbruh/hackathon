@@ -11,8 +11,11 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="./css/mobile.css">
-   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="../css/mobile.css">
+   <link rel="stylesheet" href="../css/style.css">
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
    <title>Hackathon</title>
 </head>
@@ -31,10 +34,10 @@
                </svg>
             </button>
             <ul id="primary-menu" class="primary-menu">
-               <li><a href="./" class="active primary-menu__link">Home</a></li>
-               <li><a href="./about/" class="primary-menu__link">About</a></li>
-               <li><a href="./logboek/" class="primary-menu__link">Logboek</a></li>
-               <li><a href="./documentatie/" class="primary-menu__link">Documentatie</a></li>
+               <li><a href="../" class="active primary-menu__link">Home</a></li>
+               <li><a href="../about/" class="primary-menu__link">About</a></li>
+               <li><a href="../logboek/" class="primary-menu__link">Logboek</a></li>
+               <li><a href="../documentatie/" class="primary-menu__link">Documentatie</a></li>
             </ul>
             <div class="nav-overlay"></div>
          </nav>
@@ -42,10 +45,31 @@
    </header>
    <main>
       <div class="container">
-         <section class="home">
-            <div>
-               <h1>Gyroschopisch Doolhof</h1>
+         <section class="hero">
+            <h1>Welkom bij ons project</h1>
+            <p>Dit project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.</p>
+         </section>
+
+         <section class="swiper mySwiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <img src="../images/image.png" alt="Foto 1">
+               </div>
+               <div class="swiper-slide">
+                  <img src="../images/image.png" alt="Foto 2">
+               </div>
+               <div class="swiper-slide">
+                  <img src="../images/image.png" alt="Foto 3">
+               </div>
             </div>
+
+            <!-- Navigatie en paginering -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+         </section>
+
+         <!-- <section class="home">
             <div class="content">
                <p>Ons project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.
                   De speler navigeert door het doolhof door het apparaat in verschillende richtingen te kantelen.</p>
@@ -69,6 +93,14 @@
                   </ul>
                </div>
             </div>
+         </section> -->
+
+         <!-- Video sectie -->
+         <section class="video-block">
+            <h2>Bekijk onze demonstratievideo</h2>
+            <video controls>
+               <source src="videos/demo.mp4" type="video/mp4">
+            </video>
          </section>
       </div>
    </main>
@@ -81,7 +113,8 @@
          </ul>
       </div>
    </footer>
-   <script src="./js/main.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="../js/main.js"></script>
 </body>
 
 </html>

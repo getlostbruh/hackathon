@@ -1,67 +1,117 @@
 /* --------------------------- Home pagina ---------------------------------- */
-
 .home {
-   text-align: center;
+  text-align: center;
+}
+.home .content {
+  text-align: left;
+}
 
-   & .content {
-      text-align: left;
-   }
+/* Basisopmaak */
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 4rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Video Block */
+.video-block {
+  background-color: #090e20;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.video-block video {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* --------------------------- About ---------------------------------------- */
-
-
-
 /* --------------------------- Logboek pagina ------------------------------- */
-
-.logboek {
-
-   & li {
-      padding-block-end: 2rem;
-   }
+.logboek li {
+  padding-block-end: 2rem;
 }
 
 /* ---------------------------- Documentatie -------------------------------- */
-
 .components_datasheets {
-   overflow-x: auto;
-
-   table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-   }
-
-   thead {
-      background-color: #007acc;
-      color: white;
-   }
-
-   th,
-   td {
-      padding: 1rem 1rem;
-      border: 1px solid #211529;
-      text-align: left;
-   }
-
-   tbody tr:nth-child(even) {
-      background-color: #211529;
-   }
-
-   a {
-      color: #007acc;
-      text-decoration: none;
-   }
-
-   a:hover {
-      text-decoration: underline;
-   }
+  overflow-x: auto;
+}
+.components_datasheets table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.components_datasheets thead {
+  background-color: #007acc;
+  color: white;
+}
+.components_datasheets th,
+.components_datasheets td {
+  padding: 1rem 1rem;
+  border: 1px solid #211529;
+  text-align: left;
+}
+.components_datasheets tbody tr:nth-child(even) {
+  background-color: #211529;
+}
+.components_datasheets a {
+  color: #007acc;
+  text-decoration: none;
+}
+.components_datasheets a:hover {
+  text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  .components_datasheets table,
+  .components_datasheets thead,
+  .components_datasheets tbody,
+  .components_datasheets th,
+  .components_datasheets td,
+  .components_datasheets tr {
+    display: block;
+  }
+  .components_datasheets thead {
+    display: none;
+  }
+  .components_datasheets tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    background-color: #1a1a1a;
+  }
+  .components_datasheets td {
+    border: none;
+    padding: 0.5rem;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+  .components_datasheets td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
 /* --------------------------- To-do-list ----------------------------------- */
-
-.to-do-list {
-   & ul {
-      list-style-type: none;
-   }
+.to-do-list ul {
+  list-style-type: none;
 }

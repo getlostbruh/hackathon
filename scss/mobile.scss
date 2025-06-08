@@ -1,24 +1,22 @@
 /* --------------------------- Home pagina ---------------------------------- */
 
-.home {
+/* Hero Section */
+.hero {
+   padding-inline: 2rem;
+   padding-block: 2rem;
    text-align: center;
-
-   & .content {
-      text-align: left;
-   }
 }
 
-/* Basisopmaak */
-
+// slider 
 
 .swiper {
-   width: 100%;
-   max-width: 800px;
-   height: auto;
-   margin: 4rem auto;
+   inline-size: 100%;
+   max-width: 50rem;
+   block-size: auto;
+   margin-inline: auto;
+   margin-block: 1rem;
    border-radius: 1rem;
    overflow: hidden;
-
 }
 
 .swiper-slide img {
@@ -27,33 +25,27 @@
    border-radius: 1rem;
 }
 
+// text
 
-
-
-
-/* Hero Section */
-.hero {
-   padding: 4rem 2rem;
+.home {
    text-align: center;
+
+   & .content {
+      text-align: left;
+   }
 }
 
 /* Video Block */
 .video-block {
-   background-color: #090e20;
-   padding: 3rem 2rem;
    text-align: center;
 
    & video {
-      width: 90%;
-      max-width: 800px;
+      inline-size: 90%;
+      max-inline-size: 800px;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
    }
 }
-
-
-
 
 /* --------------------------- About ---------------------------------------- */
 
@@ -71,7 +63,7 @@
 /* ---------------------------- Documentatie -------------------------------- */
 
 .components_datasheets {
-   
+
    overflow-x: auto;
 
    table {
@@ -107,6 +99,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
    .components_datasheets table,
    .components_datasheets thead,
    .components_datasheets tbody,

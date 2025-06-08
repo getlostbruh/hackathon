@@ -1,5 +1,3 @@
-
-
 // Navigation toggle logic
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector(".nav-toggle-btn");

@@ -45,62 +45,85 @@
    </header>
    <main>
       <div class="container">
-         <section class="hero">
+          <section class="hero">
             <h1>Welkom bij ons project</h1>
             <p>Dit project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.</p>
+            <img src="../images/gg.webp" alt="Project Hero Image" class="hero-img">
+         </section>
+         <section class="highlights center">
+            <h2>Project Highlights</h2>
+            <div class="highlight-grid">
+               <img src="../images/gg.webp" alt="Highlight 1">
+               <img src="../images/gg.webp" alt="Highlight 2">
+               <img src="../images/gg.webp" alt="Highlight 3">
+            </div>
          </section>
 
-         <section class="swiper mySwiper">
-            <div class="swiper-wrapper">
-               <div class="swiper-slide">
-                  <img src="../images/image.png" alt="Foto 1">
+         <section class="team center">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+               <div><img src="./images/member1.jpg" alt="Member 1">
+                  <p>Jane - Developer</p>
                </div>
-               <div class="swiper-slide">
-                  <img src="../images/image.png" alt="Foto 2">
-               </div>
-               <div class="swiper-slide">
-                  <img src="../images/image.png" alt="Foto 3">
+               <div><img src="./images/member2.jpg" alt="Member 2">
+                  <p>Alex - Designer</p>
                </div>
             </div>
-
-            <!-- Navigatie en paginering -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
          </section>
 
-         <!-- <section class="home">
-            <div class="content">
-               <p>Ons project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.
-                  De speler navigeert door het doolhof door het apparaat in verschillende richtingen te kantelen.</p>
-               <p>Het doolhof is volledig opgebouwd uit 4 16X16 Led Panelen die samen de muren, gangen en de pion (de
-                  speler) vormen.
-                  Onder het doolhof bevindt zich een LED-strip die fungeert als een voortgangsbalk. Deze visualiseert
-                  een timer van een vast aantal seconden en creëert zo een gevoel van tijdsdruk.</p>
-               <p>Bij het succesvol voltooien van een doolhof krijgt de speler een cijfer. Dit cijfer is onderdeel van
-                  een viercijferige code, die wordt weergegeven op een 7-segmentdisplay boven het doolhof.
-                  Na vier doolhoven heeft de speler de volledige code verzameld. Deze code wordt vervolgens gebruikt om
-                  verder te geraken in de escape room.</p>
-               <p>De juiste code wordt vooraf ingesteld door de organisator via een infrarood afstandsbediening, het
-                  volledige systeem draait op één enkele Arduino. Dit is niet alleen kostenefficiënt, maar zorgt er ook
-                  voor dat de volledige programmatie op één plek zit, wat de overzichtelijkheid ten goede komt.</p>
-               <div>
-                  <p>Daarnaast zijn er drie fysieke knoppen voorzien, elk met een unieke functie.</p>
-                  <ul>
-                     <li>Een slow-down knop die de timer vertraagt.</li>
-                     <li>Een start/stop knop om het spel te pauzeren of hervatten.</li>
-                     <li>Een random power-up knop die een willekeurige bonus activeert.</li>
-                  </ul>
-               </div>
-            </div>
-         </section> -->
+         <section class="flowchart center">
+            <h2>Project Logic Flowchart</h2>
+            <img src="./images/flowchart.png" alt="Flowchart of logic">
+         </section>
 
-         <!-- Video sectie -->
-         <section class="video-block">
-            <h2>Bekijk onze demonstratievideo</h2>
-            <video controls>
-               <source src="videos/demo.mp4" type="video/mp4">
-            </video>
+         <section class="hardware-software center">
+            <h2>Hardware & Software Used</h2>
+            <ul>
+               <li><strong>Arduino Uno</strong> - Core microcontroller</li>
+               <li><strong>Ultrasonic Sensor</strong> - Detects distance</li>
+               <li><strong>LED + Buzzer</strong> - Feedback</li>
+               <li><strong>Fritzing</strong> - Circuit design</li>
+               <li><strong>VS Code</strong> - Code editing</li>
+            </ul>
+         </section>
+
+         <section class="tech-doc center">
+            <h2>Technical Documentation</h2>
+            <div class="tech-block">
+               <h3>📊 Block Diagram</h3>
+               <img src="./images/block-diagram.png" alt="Block diagram">
+
+               <h3>💻 Code Snippets</h3>
+               <pre><code>// example Arduino code
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+}</code></pre>
+
+               <h3>🧠 How it works</h3>
+               <p>The ultrasonic sensor detects motion. When triggered, the buzzer and LED activate. Logic is handled
+                  via Arduino code.</p>
+            </div>
+         </section>
+
+         <section class="gallery center">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+               <img src="./images/final1.jpg" alt="Final product">
+               <img src="./images/closeup1.jpg" alt="Close-up 1">
+               <img src="./images/closeup2.jpg" alt="Close-up 2">
+            </div>
+            <div class="video-demo">
+               <video controls>
+                  <source src="./videos/demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+            </div>
          </section>
       </div>
    </main>
@@ -123,6 +146,7 @@
    </footer>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="../js/main.js"></script>
+   <script src="../js/swiper-init.js"></script>
 </body>
 
 </html>

@@ -23,7 +23,7 @@ html {
    =============================== */
 
 :root {
-   --bg-color: linear-gradient(to bottom,#1a1010, #2b0909);
+   --bg-color: linear-gradient(to bottom, #1a1010, #2b0909, #1d0909);
    --text-color: #ffffff;
    --header-bg: #130c0c;
    --header-border: #000000;
@@ -33,7 +33,7 @@ html {
    --nav-primary-menu-dropdown-active-bg: rgba(255, 255, 255, 0.1);
    --nav-toggle-bg-hamburger-x-icon: #04091f;
    --link-hover-color-accessability: #0077cc;
-   --footer-bg: #090e20;
+   --footer-bg: #1b0606;
    --footer-border: #000000;
 }
 
@@ -55,7 +55,6 @@ body.light-mode {
 
 body {
    font-family: Fredoka, sans-serif, serif;
-   line-height: 1.6;
    background: var(--bg-color);
    background-attachment: fixed;
    background-size: 100% 100%;
@@ -81,61 +80,17 @@ main {
  */
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-weight: 600;
-   line-height: 1.2;
-   margin-block: 2rem;
-}
-
 h1 {
+   margin-block: 2rem;
    font-size: 2.5rem;
 }
 
-h2 {
+h2,
+h3 {
+   margin-block: 2rem;
    font-size: 2rem;
 }
 
-h3 {
-   font-size: 1.5rem;
-}
-
-h4 {
-   font-size: 1.25rem;
-}
-
-h5 {
-   font-size: 1rem;
-}
-
-h6 {
-   font-size: 0.875rem;
-}
-
-p {
-   font-size: 1rem;
-   margin-block: 1rem;
-}
-
-/* 
-===============================
-   Lijsten
-===============================
- */
-
-ul,
-ol {
-   padding-left: 1.25rem;
-   margin-block: 1rem;
-}
-
-li {
-   margin-bottom: 0.5rem;
-}
 
 /* 
 ===============================
@@ -144,9 +99,9 @@ li {
  */
 
 img {
-   max-width: 100%;
+   max-inline-size: 100%;
    display: block;
-   height: auto;
+   block-size: auto;
 }
 
 

@@ -14,8 +14,8 @@
    <link rel="stylesheet" href="../css/mobile.css">
    <link rel="stylesheet" href="../css/style.css">
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+   <!-- Splide Library -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
 
    <title>Hackathon</title>
 </head>
@@ -45,83 +45,160 @@
    </header>
    <main>
       <div class="container">
-          <section class="hero">
-            <h1>Welkom bij ons project</h1>
-            <p>Dit project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.</p>
-            <img src="../images/gg.webp" alt="Project Hero Image" class="hero-img">
-         </section>
-         <section class="highlights center">
-            <h2>Project Highlights</h2>
-            <div class="highlight-grid">
-               <img src="../images/gg.webp" alt="Highlight 1">
-               <img src="../images/gg.webp" alt="Highlight 2">
-               <img src="../images/gg.webp" alt="Highlight 3">
+         <section>
+            <div class="hero">
+               <h1>Welkom bij ons project</h1>
+               <p>Dit project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.</p>
+            </div>
+            <div class="hero">
+               <img src="../images/gg.webp" alt="project hero image" class="hero-img">
             </div>
          </section>
-
-         <section class="team center">
-            <h2>Meet the Team</h2>
-            <div class="team-grid">
-               <div><img src="./images/member1.jpg" alt="Member 1">
-                  <p>Jane - Developer</p>
+         <section>
+            <div class="about-us">
+               <h2>The Team</h2>
+            </div>
+            <div>
+               <ul class="about-us-cards">
+                  <li>
+                     <img src="../images/man.webp" alt="photo of wolf" title="photo of wolf">
+                     <div>
+                        <p>Wolf Van Hende</p>
+                        <p>Programmer/Hardware</p>
+                     </div>
+                  </li>
+                  <li>
+                     <img src="../images/man.webp" alt="photo of casimir" title="photo of casimir">
+                     <div>
+                        <p>Casimir De Rycke</p>
+                        <p>Programmer/Hardware</p>
+                     </div>
+                  </li>
+                  <li>
+                     <img src="../images/man.webp" alt="photo of louis" title="photo of louis">
+                     <div>
+                        <p>Louis Haegeman</p>
+                        <p>Programmer/Hardware</p>
+                     </div>
+                  </li>
+                  <li>
+                     <img src="../images/man.webp" alt="photo of alberto" title="photo of alberto">
+                     <div>
+                        <p>Alberto Andronache</p>
+                        <p>Web/Programmer</p>
+                     </div>
+                  </li>
+                  <li>
+                     <img src="../images/man.webp" alt="photo of dylan" title="photo of dylan">
+                     <div>
+                        <p>Dylan de block</p>
+                        <p>Programmer</p>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <section>
+            <div class="flowchart">
+               <h2>Flowchart</h2>
+            </div>
+            <div class="flowchart">
+               <img src="../images/flowchart.png" alt="Zoomable" />
+            </div>
+         </section>
+         <section>
+            <div class="hardware-software-container">
+               <div class="hardware">
+                  <div class="hardware-text">
+                     <h3>Hardware</h3>
+                  </div>
+                  <ul>
+                     <li><strong>Arduino Mega</strong> - Main controller</li>
+                     <li><strong>GY-521 Gyroscope</strong> - Motion detection</li>
+                     <li><strong>16x16 LED Panels (x4)</strong> - Maze display</li>
+                     <li><strong>7-segmentdisplay</strong> - Code display</li>
+                     <li><strong>Infrared Remote Control</strong> - Sets the code</li>
+                  </ul>
                </div>
-               <div><img src="./images/member2.jpg" alt="Member 2">
-                  <p>Alex - Designer</p>
+               <div class="software">
+                  <div class="software-text">
+                     <h3>Software</h3>
+                  </div>
+                  <ul>
+                     <li><strong>Arduino ID</strong> - Code logic</li>
+                     <li><strong>Fritzing</strong> - Circuit diagram</li>
+                     <li><strong>Diagrams.net</strong> - Flowchart</li>
+                     <li><strong>VScode</strong> - Website</li>
+                  </ul>
                </div>
             </div>
          </section>
-
-         <section class="flowchart center">
-            <h2>Project Logic Flowchart</h2>
-            <img src="./images/flowchart.png" alt="Flowchart of logic">
-         </section>
-
-         <section class="hardware-software center">
-            <h2>Hardware & Software Used</h2>
-            <ul>
-               <li><strong>Arduino Uno</strong> - Core microcontroller</li>
-               <li><strong>Ultrasonic Sensor</strong> - Detects distance</li>
-               <li><strong>LED + Buzzer</strong> - Feedback</li>
-               <li><strong>Fritzing</strong> - Circuit design</li>
-               <li><strong>VS Code</strong> - Code editing</li>
-            </ul>
-         </section>
-
          <section class="tech-doc center">
             <h2>Technical Documentation</h2>
             <div class="tech-block">
                <h3>📊 Block Diagram</h3>
-               <img src="./images/block-diagram.png" alt="Block diagram">
+               <img src="" alt="Block diagram">
 
                <h3>💻 Code Snippets</h3>
-               <pre><code>// example Arduino code
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-}
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-}</code></pre>
 
-               <h3>🧠 How it works</h3>
-               <p>The ultrasonic sensor detects motion. When triggered, the buzzer and LED activate. Logic is handled
-                  via Arduino code.</p>
+            </div>
+         </section>
+         <section class="how-it-works">
+            <div>
+               <h2>How it works</h2>
+            </div>
+            <div class="how-it-works-content">
+               <p>Ons project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.
+                  De speler navigeert door het doolhof door het apparaat in verschillende richtingen te kantelen.</p>
+               <p>Het doolhof is volledig opgebouwd uit 4 16X16 Led Panelen die samen de muren, gangen en de pion (de
+                  speler) vormen.
+                  Onder het doolhof bevindt zich een LED-strip die fungeert als een voortgangsbalk. Deze visualiseert
+                  een timer van een vast aantal seconden en creëert zo een gevoel van tijdsdruk.</p>
+               <p>Bij het succesvol voltooien van een doolhof krijgt de speler een cijfer. Dit cijfer is onderdeel
+                  van
+                  een viercijferige code, die wordt weergegeven op een 7-segmentdisplay boven het doolhof.
+                  Na vier doolhoven heeft de speler de volledige code verzameld. Deze code wordt vervolgens gebruikt
+                  om
+                  verder te geraken in de escape room.</p>
+               <p>De juiste code wordt vooraf ingesteld door de organisator via een infrarood afstandsbediening, het
+                  volledige systeem draait op één enkele Arduino. Dit is niet alleen kostenefficiënt, maar zorgt er
+                  ook
+                  voor dat de volledige programmatie op één plek zit, wat de overzichtelijkheid ten goede komt.</p>
+               <div>
+                  <p>Daarnaast zijn er drie fysieke knoppen voorzien, elk met een unieke functie.</p>
+                  <ul>
+                     <li>Een slow-down knop die de timer vertraagt.</li>
+                     <li>Een start/stop knop om het spel te pauzeren of hervatten.</li>
+                     <li>Een random power-up knop die een willekeurige bonus activeert.</li>
+                  </ul>
+               </div>
             </div>
          </section>
 
-         <section class="gallery center">
-            <h2>Gallery</h2>
-            <div class="gallery-grid">
-               <img src="./images/final1.jpg" alt="Final product">
-               <img src="./images/closeup1.jpg" alt="Close-up 1">
-               <img src="./images/closeup2.jpg" alt="Close-up 2">
+         <section>
+            <div class="finished-product">
+               <h2>Finished product</h2>
             </div>
-            <div class="video-demo">
-               <video controls>
+            <div id="image-carousel" class="splide" aria-label="Beautiful carousel">
+               <div class="splide__track">
+                  <ul class="splide__list">
+                     <li class="splide__slide"><img src="../images/gg.webp" alt="Slide 1">
+                     </li>
+                     <li class="splide__slide"><img src="../images/gg.webp" alt="Slide 2">
+                     </li>
+                     <li class="splide__slide"><img src="../images/gg.webp" alt="Slide 3">
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+         <section class="video-home">
+            <div>
+               <h2>Demonstration video</h2>
+            </div>
+            <div>
+               <video controls class="video-home-demo">
                   <source src="./videos/demo.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
                </video>
             </div>
          </section>
@@ -133,8 +210,8 @@ void loop() {
             <ul class="footer-menu">
                <li>
                   <a href="https://github.com/WolfVH/hackathon-code">
-                     <img src="./images/github-dark.png" width=40 alt="github" data-dark="./images/github-dark.png"
-                        data-light="./images/github-light.png" id="github-icon">
+                     <img src="../images/github-dark.png" width=40 alt="github" data-dark="./images/github-dark.png"
+                        data-light="../images/github-light.png" id="github-icon">
                   </a>
                </li>
             </ul>
@@ -144,9 +221,10 @@ void loop() {
          </section>
       </div>
    </footer>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="../js/main.js"></script>
-   <script src="../js/swiper-init.js"></script>
+   <!-- Splide JS -->
+   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+   <script src="../js/carousel-splide.js"></script>
 </body>
 
 </html>

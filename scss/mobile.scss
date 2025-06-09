@@ -2,46 +2,143 @@
 
 /* Hero Section */
 .hero {
-   padding-inline: 2rem;
-   padding-block: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+
+   & .hero-img {
+      border-radius: 1rem;
+   }
+}
+
+/* About us section */
+
+.about-us {
    text-align: center;
 }
 
-// slider 
+.about-us-cards {
+   display: flex;
+   flex-direction: row;
+   gap: 3rem;
+   justify-content: center;
+   list-style-type: none;
+   flex-wrap: wrap;
+   padding-inline: 0rem;
 
-.swiper {
-   inline-size: 100%;
-   max-width: 50rem;
-   block-size: auto;
-   margin-inline: auto;
-   margin-block: 1rem;
-   border-radius: 1rem;
-   overflow: hidden;
+
+   & li {
+      background-color: #1d0909;
+      text-align: center;
+      border-radius: 0.5rem;
+      outline: 2px solid #ffffff;
+      max-inline-size: 20rem;
+
+      & img {
+         border-start-start-radius: 0.3rem;
+         border-start-end-radius: 0.3rem;
+      }
+   }
 }
 
-.swiper-slide img {
-   width: 100%;
-   display: block;
-   border-radius: 1rem;
+/* Flowchart */
+
+.flowchart {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
 }
 
-// text
 
-.home {
+/* Hardware-software */
+
+.hardware-software-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   gap: 5rem;
+   flex-grow: 1;
+   padding-block: 5rem;
+
+   .hardware,
+   .software {
+      padding-inline: 1.5rem;
+      padding-block: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      flex-grow: 1;
+
+      & ul {
+         list-style-type: none;
+         padding-inline: 0rem;
+      }
+   }
+
+   .software-text,
+   .hardware-text {
+      text-align: center;
+   }
+}
+
+
+@media (max-width: 900px) {
+   .hardware-software-container {
+      flex-direction: column;
+      gap: 2rem;
+
+      .hardware,
+      .software {
+         width: 90%;
+      }
+   }
+}
+
+
+
+
+
+/* How it works section */
+
+.how-it-works {
    text-align: center;
 
-   & .content {
+   & .how-it-works-content {
       text-align: left;
    }
 }
 
-/* Video Block */
-.video-block {
+/* Finished product section */
+
+.finished-product {
+   text-align: center;
+}
+
+.splide {
+   max-width: 800px;
+   margin: 2rem auto;
+   border-radius: 1rem;
+   overflow: hidden;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.splide__slide img {
+   width: 100%;
+   height: auto;
+   display: block;
+}
+
+/* Video home section */
+.video-home {
    text-align: center;
 
-   & video {
+   & .video-home-demo {
       inline-size: 90%;
-      max-inline-size: 800px;
+      max-inline-size: 60rem;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
    }

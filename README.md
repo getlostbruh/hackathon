@@ -1,3 +1,3 @@
 ## 📥 Downloads
 
-👉 [Download flowchart-hackathon.drawio](./flowchart-hackathon.drawio)
+👉 [Download flowchart-hackathon.drawio](./downloads/flowchart-hackathon.drawio)

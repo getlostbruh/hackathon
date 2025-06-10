@@ -1,4 +1,8 @@
-/* --------------------------- Home pagina ---------------------------------- */
+/* 
+===============================
+   Home pagina
+===============================
+*/
 /* Hero Section */
 .hero {
   display: flex;
@@ -105,20 +109,20 @@
   }
 }
 /* How it works section */
-.how-it-works {
+.how-it-works-container {
   text-align: center;
   padding-inline: 1rem;
   padding-block: 1rem;
 }
-.how-it-works .how-it-works-content {
+.how-it-works-container .how-it-works-content {
   text-align: left;
 }
-.how-it-works .how-it-works-content p {
+.how-it-works-container .how-it-works-content p {
   margin: 0rem;
 }
 
 @media (max-width: 760px) {
-  .how-it-works .how-it-works-content p {
+  .how-it-works-container .how-it-works-content p {
     margin: 0.5rem;
   }
 }
@@ -152,13 +156,26 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --------------------------- About ---------------------------------------- */
-/* --------------------------- Logboek pagina ------------------------------- */
+/* 
+===============================
+   About pagina 
+===============================
+*/
+/* Copy paste van About us section in home.*/
+/* 
+===============================
+   Logboek pagina
+===============================
+*/
 .logboek li {
   padding-block-end: 2rem;
 }
 
-/* ---------------------------- Documentatie -------------------------------- */
+/* 
+===============================
+   Documentate pagina
+===============================
+*/
 .components_datasheets {
   overflow-x: auto;
 }
@@ -174,21 +191,21 @@
 .components_datasheets th,
 .components_datasheets td {
   padding: 1rem 1rem;
-  border: 1px solid #211529;
+  border: 1px solid #0a0909;
   text-align: left;
 }
-.components_datasheets tbody tr:nth-child(even) {
-  background-color: #211529;
+.components_datasheets tbody tr {
+  background-color: #1a1a1a;
 }
 .components_datasheets a {
-  color: #007acc;
+  color: #29a6ff;
   text-decoration: none;
 }
 .components_datasheets a:hover {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .components_datasheets table,
   .components_datasheets thead,
   .components_datasheets tbody,
@@ -205,6 +222,7 @@
     border: 1px solid #ccc;
     padding: 0.5rem;
     background-color: #1a1a1a;
+    border-radius: 0.25rem;
   }
   .components_datasheets td {
     border: none;
@@ -212,6 +230,10 @@
     position: relative;
     padding-left: 50%;
     text-align: left;
+    border-bottom: 1px solid #444;
+  }
+  .components_datasheets td:last-child {
+    border-bottom: none;
   }
   .components_datasheets td::before {
     content: attr(data-label);
@@ -221,8 +243,7 @@
     font-weight: bold;
     white-space: nowrap;
   }
-}
-/* --------------------------- To-do-list ----------------------------------- */
-.to-do-list ul {
-  list-style-type: none;
+  .components_datasheets a:hover {
+    color: #3399ff;
+  }
 }

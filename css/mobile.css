@@ -61,6 +61,7 @@
   padding-block: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #1d0909;
   flex: 1 1 10rem;
 }
 .hardware-software-container .hardware-software-card ul {

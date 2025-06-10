@@ -54,6 +54,7 @@ body {
   padding-block: 0;
   padding-inline: 0;
   font-family: Fredoka, sans-serif, serif;
+  line-height: 1.6;
   color: var(--text-color);
   background: var(--bg-color);
   background-size: cover;
@@ -63,6 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   min-block-size: 100dvh;
+  overflow-x: hidden;
 }
 
 main {
@@ -74,7 +76,7 @@ main {
 ===============================
    Typografie
 ===============================
- */
+*/
 h1 {
   margin-block: 2rem;
   font-size: 2.5rem;
@@ -94,7 +96,7 @@ h3 {
 ===============================
    Images
 ===============================
- */
+*/
 img {
   max-inline-size: 100%;
   display: block;
@@ -105,7 +107,7 @@ img {
 ===============================
    Links
 ===============================
- */
+*/
 a {
   color: inherit;
   text-decoration: underline;
@@ -115,11 +117,25 @@ a {
 a:hover,
 a:focus {
   color: var(--link-hover-color-accessability);
+  outline: none;
 }
 
 a:focus-visible {
   outline: 2px solid var(--link-hover-color-accessability);
   outline-offset: 2px;
+}
+
+/* 
+===============================
+   buttons
+===============================
+*/
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 /*

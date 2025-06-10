@@ -50,48 +50,77 @@
 .hardware-software-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: row;
   gap: 5rem;
-  flex-grow: 1;
   padding-block: 5rem;
 }
-.hardware-software-container .hardware,
-.hardware-software-container .software {
+.hardware-software-container .hardware-software-title {
+  text-align: center;
+}
+.hardware-software-container .hardware-software-card {
   padding-inline: 1.5rem;
   padding-block: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  flex-grow: 1;
+  flex: 1 1 10rem;
 }
-.hardware-software-container .hardware ul,
-.hardware-software-container .software ul {
+.hardware-software-container .hardware-software-card ul {
   list-style-type: none;
   padding-inline: 0rem;
 }
-.hardware-software-container .software-text,
-.hardware-software-container .hardware-text {
-  text-align: center;
+.hardware-software-container .hardware-software-card li {
+  display: flex;
+  flex-direction: row;
+  margin-block-end: 1rem;
 }
 
 @media (max-width: 900px) {
   .hardware-software-container {
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
   }
-  .hardware-software-container .hardware,
-  .hardware-software-container .software {
-    width: 90%;
+  .hardware-software-container .hardware-software-card {
+    inline-size: 80%;
+  }
+}
+.hardware-software-remove-dash::before {
+  content: "-";
+  margin: 0 0.3em;
+}
+
+@media (max-width: 600px) {
+  .hardware-software-container .hardware-software-card {
+    inline-size: 90%;
+  }
+  .hardware-software-container .hardware-software-card ul li {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .hardware-software-container .hardware-software-card ul li .hardware-software-remove-dash {
+    padding-inline-start: 1rem;
+  }
+  .hardware-software-container .hardware-software-card ul li .hardware-software-remove-dash::before {
+    content: "";
   }
 }
 /* How it works section */
 .how-it-works {
   text-align: center;
+  padding-inline: 1rem;
+  padding-block: 1rem;
 }
 .how-it-works .how-it-works-content {
   text-align: left;
 }
+.how-it-works .how-it-works-content p {
+  margin: 0rem;
+}
 
+@media (max-width: 760px) {
+  .how-it-works .how-it-works-content p {
+    margin: 0.5rem;
+  }
+}
 /* Finished product section */
 .finished-product {
   text-align: center;
@@ -116,7 +145,7 @@
   text-align: center;
 }
 .video-home .video-home-demo {
-  inline-size: 90%;
+  inline-size: 100%;
   max-inline-size: 60rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

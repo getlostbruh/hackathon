@@ -59,57 +59,102 @@
 .hardware-software-container {
    display: flex;
    justify-content: center;
-   align-items: center;
-   flex-direction: row;
    gap: 5rem;
-   flex-grow: 1;
    padding-block: 5rem;
 
-   .hardware,
-   .software {
+   .hardware-software-title {
+      text-align: center;
+   }
+
+   & .hardware-software-card {
       padding-inline: 1.5rem;
       padding-block: 1.5rem;
       border-radius: 1rem;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-      flex-grow: 1;
+      flex: 1 1 10rem;
 
       & ul {
          list-style-type: none;
          padding-inline: 0rem;
       }
-   }
 
-   .software-text,
-   .hardware-text {
-      text-align: center;
+      li {
+         display: flex;
+         flex-direction: row;
+         margin-block-end: 1rem;
+      }
    }
 }
-
 
 @media (max-width: 900px) {
    .hardware-software-container {
       flex-direction: column;
       gap: 2rem;
+      align-items: center;
 
-      .hardware,
-      .software {
-         width: 90%;
+      .hardware-software-card {
+         inline-size: 80%;
       }
    }
 }
 
+.hardware-software-remove-dash {
+   &::before {
+      content: "-";
+      margin: 0 0.3em;
+   }
+}
 
 
+@media (max-width: 600px) {
+   .hardware-software-container {
 
+      & .hardware-software-card {
+         inline-size: 90%;
+
+         ul li {
+            flex-direction: column;
+            gap: 0.4rem;
+
+            & .hardware-software-remove-dash {
+               padding-inline-start: 1rem;
+
+               // Remove dash on mobile
+               &::before {
+                  content: "";
+               }
+            }
+         }
+      }
+   }
+}
 
 /* How it works section */
 
 .how-it-works {
    text-align: center;
+   padding-inline: 1rem;
+   padding-block: 1rem;
 
    & .how-it-works-content {
       text-align: left;
+
+      & p {
+         margin: 0rem;
+      }
    }
+}
+
+@media (max-width: 760px) {
+   .how-it-works {
+
+   & .how-it-works-content {
+
+      & p {
+         margin: 0.5rem;
+      }
+   }
+}
 }
 
 /* Finished product section */
@@ -137,7 +182,7 @@
    text-align: center;
 
    & .video-home-demo {
-      inline-size: 90%;
+      inline-size: 100%;
       max-inline-size: 60rem;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

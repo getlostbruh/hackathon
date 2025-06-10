@@ -1,11 +1,40 @@
 /*
 ------------------ Algemene Settings --------------------------
 */
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 1rem;
   scroll-behavior: smooth;
   line-height: 1.6;
   block-size: 100%;
+  background: var(--bg-color);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-block-size: 100dvh;
+  min-block-size: -webkit-fill-available;
+}
+
+body {
+  font-family: Fredoka, sans-serif, serif;
+  color: var(--text-color);
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-inline: 0;
+  margin-block: 0;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  background: transparent;
+}
+
+main {
+  flex: 1;
+  padding-block-start: 5rem;
 }
 
 *,
@@ -45,25 +74,6 @@ body.light-mode {
   --link-hover-color-accessability: #004499;
   --footer-bg: #f8f8f8;
   --footer-border: #cccccc;
-}
-
-body {
-  font-family: Fredoka, sans-serif, serif;
-  background: var(--bg-color);
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  color: var(--text-color);
-  block-size: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-inline: 0;
-  margin-block: 0;
-}
-
-main {
-  flex: 1;
-  padding-top: 5rem;
 }
 
 /* 
@@ -116,6 +126,8 @@ a:focus {
   max-inline-size: 90rem;
   margin-inline: auto;
   padding-inline: 1rem;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 /*
@@ -277,4 +289,5 @@ footer .footer-menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-tap-highlight-color: transparent;
 }

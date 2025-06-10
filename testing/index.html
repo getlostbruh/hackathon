@@ -108,69 +108,75 @@
          </section>
          <section>
             <div class="hardware-software-container">
-               <div class="hardware">
-                  <div class="hardware-text">
+               <div class="hardware-software-card">
+                  <div class="hardware-software-title">
                      <h3>Hardware</h3>
                   </div>
                   <ul>
-                     <li><strong>Arduino Mega</strong> - Main controller</li>
-                     <li><strong>GY-521 Gyroscope</strong> - Motion detection</li>
-                     <li><strong>16x16 LED Panels (x4)</strong> - Maze display</li>
-                     <li><strong>7-segmentdisplay</strong> - Code display</li>
-                     <li><strong>Infrared Remote Control</strong> - Sets the code</li>
+                     <li><strong>Arduino Mega</strong><span class="hardware-software-remove-dash">Main controller</span>
+                     </li>
+                     <li><strong>GY-521 Gyroscope</strong><span class="hardware-software-remove-dash">Motion
+                           detection</span></li>
+                     <li><strong>16x16 LED Panels (x4)</strong><span class="hardware-software-remove-dash">Maze
+                           display</span></li>
+                     <li><strong>7-segmentdisplay</strong><span class="hardware-software-remove-dash">Code
+                           display</span></li>
+                     <li><strong>Infrared Remote Control</strong><span class="hardware-software-remove-dash">Sets the
+                           code</span></li>
                   </ul>
                </div>
-               <div class="software">
-                  <div class="software-text">
+               <div class="hardware-software-card">
+                  <div class="hardware-software-title">
                      <h3>Software</h3>
                   </div>
                   <ul>
-                     <li><strong>Arduino ID</strong> - Code logic</li>
-                     <li><strong>Fritzing</strong> - Circuit diagram</li>
-                     <li><strong>Diagrams.net</strong> - Flowchart</li>
-                     <li><strong>VScode</strong> - Website</li>
+                     <li><strong>Arduino ID</strong><span class="hardware-software-remove-dash">Code logic</span></li>
+                     <li><strong>Fritzing</strong><span class="hardware-software-remove-dash">Circuit diagram</span>
+                     </li>
+                     <li><strong>Diagrams.net</strong><span class="hardware-software-remove-dash">Flowchart</span></li>
+                     <li><strong>VScode</strong><span class="hardware-software-remove-dash">Website</span></li>
                   </ul>
                </div>
             </div>
          </section>
-         <section class="tech-doc center">
-            <h2>Technical Documentation</h2>
-            <div class="tech-block">
-               <h3>📊 Block Diagram</h3>
-               <img src="" alt="Block diagram">
 
-               <h3>💻 Code Snippets</h3>
-
+         <section>
+            <div>
+               <h2>Technical Documentation</h2>
+               <div class="tech-block">
+                  <h3>📊 Block Diagram</h3>
+                  <img src="" alt="Block diagram">
+                  <h3>💻 Code Snippets</h3>
+                  <img src="" alt="Code Snippets">
+               </div>
             </div>
          </section>
-         <section class="how-it-works">
-            <div>
-               <h2>How it works</h2>
-            </div>
-            <div class="how-it-works-content">
-               <p>Ons project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.
-                  De speler navigeert door het doolhof door het apparaat in verschillende richtingen te kantelen.</p>
-               <p>Het doolhof is volledig opgebouwd uit 4 16X16 Led Panelen die samen de muren, gangen en de pion (de
-                  speler) vormen.
-                  Onder het doolhof bevindt zich een LED-strip die fungeert als een voortgangsbalk. Deze visualiseert
-                  een timer van een vast aantal seconden en creëert zo een gevoel van tijdsdruk.</p>
-               <p>Bij het succesvol voltooien van een doolhof krijgt de speler een cijfer. Dit cijfer is onderdeel
-                  van
-                  een viercijferige code, die wordt weergegeven op een 7-segmentdisplay boven het doolhof.
-                  Na vier doolhoven heeft de speler de volledige code verzameld. Deze code wordt vervolgens gebruikt
-                  om
-                  verder te geraken in de escape room.</p>
-               <p>De juiste code wordt vooraf ingesteld door de organisator via een infrarood afstandsbediening, het
-                  volledige systeem draait op één enkele Arduino. Dit is niet alleen kostenefficiënt, maar zorgt er
-                  ook
-                  voor dat de volledige programmatie op één plek zit, wat de overzichtelijkheid ten goede komt.</p>
+
+         <section>
+            <div class="how-it-works">
                <div>
-                  <p>Daarnaast zijn er drie fysieke knoppen voorzien, elk met een unieke functie.</p>
-                  <ul>
-                     <li>Een slow-down knop die de timer vertraagt.</li>
-                     <li>Een start/stop knop om het spel te pauzeren of hervatten.</li>
-                     <li>Een random power-up knop die een willekeurige bonus activeert.</li>
-                  </ul>
+                  <h2>How it works</h2>
+               </div>
+               <div class="how-it-works-content">
+                  <p>Ons project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.</p>
+                  <p>De speler navigeert door het doolhof door het apparaat in verschillende richtingen te kantelen.</p>
+                  <p>Het doolhof is volledig opgebouwd uit 4 16X16 Led Panelen die samen de muren, gangen en de pion (de speler) vormen.</p>
+                  <p>Onder het doolhof bevindt zich een LED-strip die fungeert als een voortgangsbalk.</p>
+                  <p>Deze visualiseert een timer van een vast aantal seconden en creëert zo een gevoel van tijdsdruk.</p>
+                  <p>Bij het succesvol voltooien van een doolhof krijgt de speler een cijfer.</p>
+                  <p>Dit cijfer is onderdeelvan een viercijferige code, die wordt weergegeven op een 7-segmentdisplay boven het doolhof.</p>
+                  <p>Na vier doolhoven heeft de speler de volledige code verzameld.</p>
+                  <p>Deze code wordt vervolgens gebruikt om verder te geraken in de escape room.</p>
+                  <p>De juiste code wordt vooraf ingesteld door de organisator via een infrarood afstandsbediening.</p>
+                  <p>Het volledige systeem draait op één enkele Arduino.</p>    
+                  <div>
+                     <p>Daarnaast zijn er drie fysieke knoppen voorzien, elk met een unieke functie.</p>
+                     <ul>
+                        <li>Een slow-down knop die de timer vertraagt.</li>
+                        <li>Een start/stop knop om het spel te pauzeren of hervatten.</li>
+                        <li>Een random power-up knop die een willekeurige bonus activeert.</li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </section>
@@ -192,14 +198,16 @@
                </div>
             </div>
          </section>
-         <section class="video-home">
-            <div>
-               <h2>Demonstration video</h2>
-            </div>
-            <div>
-               <video controls class="video-home-demo">
-                  <source src="./videos/demo.mp4" type="video/mp4">
-               </video>
+         <section>
+            <div class="video-home">
+               <div>
+                  <h2>Demonstration video</h2>
+               </div>
+               <div>
+                  <video controls class="video-home-demo">
+                     <source src="./videos/demo.mp4" type="video/mp4">
+                  </video>
+               </div>
             </div>
          </section>
       </div>

@@ -145,7 +145,6 @@ select {
    font-size: 1rem;
 }
 
-
 /*
 -------------- Algemene Settings Containers -------------------
 */
@@ -171,7 +170,8 @@ header {
    border: 1px solid var(--header-border);
    margin-block: 1rem;
    margin-inline: auto;
-   max-inline-size: 70%;
+   inline-size: clamp(35rem, 50%, 50%);
+   z-index: 40;
 
    & .primary-menu {
       display: flex;
@@ -183,7 +183,7 @@ header {
       margin-block: 0;
       padding-inline: 0;
       padding-block: 0;
-      z-index: 3;
+      z-index: 41;
 
       & .primary-menu__link {
          text-decoration: none;
@@ -209,7 +209,6 @@ header {
 
 @media (max-width: 768px) {
    header {
-      max-inline-size: none;
       inline-size: 100%;
       border: none;
       border-radius: 0;
@@ -230,7 +229,7 @@ header {
          position: fixed;
          inset-block-start: 2rem; //controls the button position
          inset-inline-end: 1rem; //controls the button position
-         z-index: 2;
+         z-index: 43;
          cursor: pointer;
       }
 
@@ -296,32 +295,31 @@ header {
       & .nav-toggle-btn.open .icon-close {
          display: block;
       }
+
+      .nav-overlay {
+         position: fixed;
+         inset: 0;
+         background-color: rgba(0, 0, 0, 0.8);
+         z-index: 30;
+         opacity: 0;
+         pointer-events: none;
+         transition: opacity 0.3s ease;
+         height: 100dvh;
+      }
+
+      .nav-overlay.show {
+         opacity: 1;
+         pointer-events: auto;
+      }
    }
 }
 
-.nav-overlay {
-   position: fixed;
-   inset: 0;
-   background-color: rgba(0, 0, 0, 0.8);
-   z-index: 1;
-   opacity: 0;
-   pointer-events: none;
-   transition: opacity 0.3s ease;
-   block-size: 100dvh;
-}
-
-.nav-overlay.show {
-   opacity: 1;
-   pointer-events: auto;
-}
+/* Stops scrolling, toggled via js. */
 
 body.no-scroll {
-  overflow: hidden;
-  height: 100dvh;
-  touch-action: none;
+   overflow: hidden;
+   touch-action: none;
 }
-
-
 
 /*
 ----------------- Footer --------------------------------------

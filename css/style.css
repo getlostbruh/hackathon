@@ -162,8 +162,7 @@ header {
   border: 1px solid var(--header-border);
   margin-block: 1rem;
   margin-inline: auto;
-  min-inline-size: 35rem;
-  max-inline-size: 50%;
+  max-inline-size: 70%;
 }
 header .primary-menu {
   display: flex;
@@ -196,7 +195,8 @@ header .nav-toggle-btn {
 
 @media (max-width: 768px) {
   header {
-    max-inline-size: 100%;
+    max-inline-size: none;
+    inline-size: 100%;
     border: none;
     border-radius: 0;
     margin-block: 0;
@@ -273,20 +273,29 @@ header .nav-toggle-btn {
   header .nav-toggle-btn.open .icon-close {
     display: block;
   }
-  header .nav-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  header .nav-overlay.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
 }
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  block-size: 100dvh;
+}
+
+.nav-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100dvh;
+  touch-action: none;
+}
+
 /*
 ----------------- Footer --------------------------------------
 */

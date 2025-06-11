@@ -38,41 +38,41 @@ body.light-mode {
 }
 
 html {
-  font-size: 1rem;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-  min-block-size: 100dvh;
+   font-size: 1rem;
+   line-height: 1.6;
+   scroll-behavior: smooth;
+   box-sizing: border-box;
+   min-block-size: 100dvh;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+   box-sizing: inherit;
 }
 
 body {
-  margin-block: 0;
-  margin-inline: 0;
-  padding-block: 0;
-  padding-inline: 0;
-  font-family: Fredoka, sans-serif, serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background: var(--bg-color);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-block-size: 100vh;
-  display: flex;
-  flex-direction: column;
-  min-block-size: 100dvh;
-  overflow-x: hidden;
+   margin-block: 0;
+   margin-inline: 0;
+   padding-block: 0;
+   padding-inline: 0;
+   font-family: Fredoka, sans-serif, serif;
+   line-height: 1.6;
+   color: var(--text-color);
+   background: var(--bg-color);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   min-block-size: 100vh;
+   display: flex;
+   flex-direction: column;
+   min-block-size: 100dvh;
+   overflow-x: hidden;
 }
 
 main {
-  flex: 1;
-  padding-block: 5rem 3rem;
+   flex: 1;
+   padding-block: 5rem 3rem;
 }
 
 /* 
@@ -82,18 +82,18 @@ main {
 */
 
 h1 {
-  margin-block: 2rem;
-  font-size: 2.5rem;
+   margin-block: 2rem;
+   font-size: 2.5rem;
 }
 
 h2 {
-  margin-block: 2rem;
-  font-size: 2rem;
+   margin-block: 2rem;
+   font-size: 2rem;
 }
 
 h3 {
-  margin-block: 2rem;
-  font-size: 1.6rem;
+   margin-block: 2rem;
+   font-size: 1.6rem;
 }
 
 /* 
@@ -103,9 +103,9 @@ h3 {
 */
 
 img {
-  max-inline-size: 100%;
-  display: block;
-  block-size: auto;
+   max-inline-size: 100%;
+   display: block;
+   block-size: auto;
 }
 
 /* 
@@ -115,20 +115,20 @@ img {
 */
 
 a {
-  color: inherit;
-  text-decoration: underline;
-  transition: color 0.2s ease;
+   color: inherit;
+   text-decoration: underline;
+   transition: color 0.2s ease;
 }
 
 a:hover,
 a:focus {
-  color: var(--link-hover-color-accessability);
-  outline: none;
+   color: var(--link-hover-color-accessability);
+   outline: none;
 }
 
 a:focus-visible {
-  outline: 2px solid var(--link-hover-color-accessability);
-  outline-offset: 2px;
+   outline: 2px solid var(--link-hover-color-accessability);
+   outline-offset: 2px;
 }
 
 /* 
@@ -141,8 +141,8 @@ button,
 input,
 textarea,
 select {
-  font-family: inherit;
-  font-size: 1rem;
+   font-family: inherit;
+   font-size: 1rem;
 }
 
 
@@ -150,9 +150,9 @@ select {
 -------------- Algemene Settings Containers -------------------
 */
 .container {
-  max-inline-size: 90rem;
-  margin-inline: auto;
-  padding-inline: 1rem;
+   max-inline-size: 90rem;
+   margin-inline: auto;
+   padding-inline: 1rem;
 }
 
 /*
@@ -171,9 +171,7 @@ header {
    border: 1px solid var(--header-border);
    margin-block: 1rem;
    margin-inline: auto;
-   min-inline-size: 35rem;
-   max-inline-size: 50%;
-
+   max-inline-size: 70%;
 
    & .primary-menu {
       display: flex;
@@ -211,7 +209,8 @@ header {
 
 @media (max-width: 768px) {
    header {
-      max-inline-size: 100%;
+      max-inline-size: none;
+      inline-size: 100%;
       border: none;
       border-radius: 0;
       margin-block: 0;
@@ -297,23 +296,32 @@ header {
       & .nav-toggle-btn.open .icon-close {
          display: block;
       }
-
-      & .nav-overlay {
-         position: fixed;
-         inset: 0;
-         background-color: rgba(0, 0, 0, 0.8);
-         z-index: 1;
-         opacity: 0;
-         pointer-events: none;
-         transition: opacity 0.3s ease;
-      }
-
-      & .nav-overlay.show {
-         opacity: 1;
-         pointer-events: auto;
-      }
    }
 }
+
+.nav-overlay {
+   position: fixed;
+   inset: 0;
+   background-color: rgba(0, 0, 0, 0.8);
+   z-index: 1;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0.3s ease;
+   block-size: 100dvh;
+}
+
+.nav-overlay.show {
+   opacity: 1;
+   pointer-events: auto;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100dvh;
+  touch-action: none;
+}
+
+
 
 /*
 ----------------- Footer --------------------------------------

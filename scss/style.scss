@@ -7,9 +7,9 @@
    =============================== */
 
 :root {
-   --bg-color: linear-gradient(to bottom, #2b0909, #1d0909);
+   --bg-color: linear-gradient(to bottom, #050c1c);
    --text-color: #ffffff;
-   --header-bg: #130c0c;
+   --header-bg: #060b19;
    --header-border: #000000;
    --nav-link-hover: #706d6d;
    --nav-link-active: #f5f5f5;
@@ -67,11 +67,11 @@ body {
    flex-direction: column;
    min-block-size: 100dvh;
    overflow-x: hidden;
+   
 }
 
 main {
    flex: 1;
-   padding-block: 5rem 3rem;
 }
 
 /* 
@@ -104,7 +104,6 @@ h3 {
 img {
    max-inline-size: 100%;
    display: block;
-   block-size: auto;
 }
 
 /* 

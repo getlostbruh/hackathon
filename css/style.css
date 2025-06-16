@@ -1,74 +1,43 @@
 /*
 ------------------ Algemene Settings --------------------------
 */
-/* ===============================
-   Theme Variables (Dark Default)
-   =============================== */
 :root {
-  --bg-color: linear-gradient(to bottom, #050c1c);
-  --text-color: #ffffff;
-  --header-bg: #060b19;
-  --header-border: #000000;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
   --nav-link-hover: #706d6d;
-  --nav-link-active: #f5f5f5;
-  --nav-primary-menu-dropdown-bg: #020617;
-  --nav-primary-menu-dropdown-active-bg: rgba(255, 255, 255, 0.1);
-  --nav-toggle-bg-hamburger-x-icon: #04091f;
+  --nav-link-active: rgba(255, 255, 255, 0.1);
   --link-hover-color-accessability: #0077cc;
-  --footer-bg: #1b0606;
-  --footer-border: #000000;
 }
 
-body.light-mode {
-  --bg-color: #ffffff;
-  --text-color: #0a0a0a;
-  --header-bg: #f0f0f0;
-  --header-border: #cccccc;
-  --nav-link-hover: #666666;
-  --nav-link-active: #0c0b0b;
-  --nav-primary-menu-dropdown-bg: #ffffff;
-  --nav-primary-menu-dropdown-active-bg: rgba(0, 0, 0, 0.05);
-  --nav-toggle-bg-hamburger-x-icon: #dddddd;
-  --link-hover-color-accessability: #004499;
-  --footer-bg: #f8f8f8;
-  --footer-border: #cccccc;
-}
-
-html {
-  font-size: 1rem;
-  line-height: 1.6;
-  scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  min-block-size: 100dvh;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+  font-family: "Fredoka", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  margin-block: 0;
-  margin-inline: 0;
-  padding-block: 0;
-  padding-inline: 0;
-  font-family: Fredoka, sans-serif, serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background: var(--bg-color);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
   min-block-size: 100vh;
   display: flex;
   flex-direction: column;
-  min-block-size: 100dvh;
-  overflow-x: hidden;
 }
 
 main {
   flex: 1;
+}
+
+/*
+-------------- Algemene Settings Containers -------------------
+*/
+.container {
+  max-inline-size: 90rem;
+  padding-inline: 1rem;
+  margin-inline: auto;
+  margin-block: 0;
 }
 
 /* 
@@ -77,17 +46,14 @@ main {
 ===============================
 */
 h1 {
-  margin-block: 2rem;
   font-size: 2.5rem;
 }
 
 h2 {
-  margin-block: 2rem;
   font-size: 2rem;
 }
 
 h3 {
-  margin-block: 2rem;
   font-size: 1.6rem;
 }
 
@@ -123,57 +89,34 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-/* 
-===============================
-   buttons
-===============================
-*/
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-/*
--------------- Algemene Settings Containers -------------------
-*/
-.container {
-  max-inline-size: 90rem;
-  margin-inline: auto;
-  padding-inline: 1rem;
-}
-
 /*
 -------------- Navigatie --------------------------------------
 */
+/* blurs the nav background */
+@media (min-width: 769px) {
+  header {
+    backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+}
 header {
-  padding-block: 0.4rem;
-  position: fixed;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  inset-block-start: 0;
-  z-index: 100;
+  position: sticky;
   border-radius: 1rem;
-  background-color: var(--header-bg);
-  border: 1px solid var(--header-border);
-  margin-block: 1rem;
+  border: 1px solid #3a4049;
   margin-inline: auto;
-  inline-size: clamp(35rem, 50%, 50%);
+  inset-block-start: 10px;
   z-index: 40;
 }
 header .primary-menu {
   display: flex;
-  justify-content: center;
   gap: 2.5rem;
-  flex-wrap: wrap;
   list-style: none;
-  margin-inline: 0;
   margin-block: 0;
-  padding-inline: 0;
-  padding-block: 0;
-  z-index: 41;
+  padding-inline: 7rem;
+  padding-block: 0.8rem;
+  z-index: 42;
 }
 header .primary-menu .primary-menu__link {
   text-decoration: none;
@@ -185,7 +128,11 @@ header .primary-menu .primary-menu__link:hover {
   transition: 0.5s;
 }
 header .primary-menu .primary-menu__link.active {
-  border-block-end: 2px solid var(--nav-link-active);
+  background-color: var(--nav-link-active);
+  padding-inline: 0.4rem;
+  padding-block: 0.4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 header .nav-toggle-btn {
   display: none;
@@ -196,21 +143,16 @@ header .nav-toggle-btn {
   header {
     inline-size: 100%;
     border: none;
-    border-radius: 0;
-    margin-block: 0;
-    margin-inline: 0;
   }
   header .nav-toggle-btn {
-    padding-block: 0.5rem;
-    padding-inline: 0.5rem;
     inline-size: 3rem;
     block-size: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--nav-toggle-bg-hamburger-x-icon);
+    background-color: #04091f;
     border-radius: 0.5rem;
-    border: 1px solid var(--header-border);
+    border: 1px solid;
     position: fixed;
     inset-block-start: 2rem;
     inset-inline-end: 1rem;
@@ -218,18 +160,16 @@ header .nav-toggle-btn {
     cursor: pointer;
   }
   header .primary-menu {
-    opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translateY(-1rem);
+    transform: translateY(-2rem);
     transition: opacity 0.3s, transform 0.3s;
     position: absolute;
-    inset-block-start: 5.2rem;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    background-color: var(--nav-primary-menu-dropdown-bg);
+    inset-block-start: 5rem;
+    inset-inline: 0;
+    background-color: #020617;
     padding-block: 1rem;
-    padding-inline: 1rem;
+    padding-inline: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -238,16 +178,15 @@ header .nav-toggle-btn {
     display: block;
     inline-size: 100%;
     padding-inline: 1rem;
-    padding-block: 1rem;
-    font-size: 1.5rem;
+    padding-block: 2rem;
     text-align: left;
     border-radius: 0.5rem;
-    transition: background-color 0.2s ease;
     -webkit-tap-highlight-color: transparent;
   }
   header .primary-menu .primary-menu__link:hover, header .primary-menu .primary-menu__link.active {
-    background-color: var(--nav-primary-menu-dropdown-active-bg);
-    border-block-end: var(--nav-primary-menu-dropdown-active-bg);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-inline: 1rem;
+    padding-block: 1rem;
   }
   header .primary-menu.open {
     opacity: 1;
@@ -259,8 +198,6 @@ header .nav-toggle-btn {
     inline-size: 2rem;
     block-size: 2rem;
     fill: none;
-    stroke: var(--text-color);
-    stroke-width: 2;
   }
   header .icon-close {
     display: none;
@@ -275,11 +212,10 @@ header .nav-toggle-btn {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 30;
+    z-index: 41;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    height: 100dvh;
   }
   header .nav-overlay.show {
     opacity: 1;
@@ -296,20 +232,19 @@ body.no-scroll {
 ----------------- Footer --------------------------------------
 */
 footer {
-  background-color: var(--footer-bg);
-  border-block-start: 1px solid var(--footer-border);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-block: 3rem 0rem;
+  padding-block: 1rem;
+  border-block-start: 1px solid #334155;
+  color: #94a3b8;
 }
 footer .footer-menu {
-  padding-inline: 0rem;
-  padding-block: 1rem 0rem;
-  margin-inline: 0rem;
-  margin-block: 0rem;
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
   -webkit-tap-highlight-color: transparent;
+  padding-block: 0rem 1rem;
 }

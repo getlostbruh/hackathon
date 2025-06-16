@@ -15,32 +15,31 @@
    <link rel="stylesheet" href="./css/style.css">
    <!-- Splide Library -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-   <title>Hackathon</title>
+   <title>Home</title>
 </head>
 
 <body>
    <header>
-      <div class="container">
-         <nav aria-label="Primary Navigation">
-            <button class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false"
-               aria-controls="primary-menu">
-               <svg class="icon icon-menu" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" />
-               </svg>
-               <svg class="icon icon-close" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M6 6l12 12M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" />
-               </svg>
-            </button>
-            <ul id="primary-menu" class="primary-menu">
-               <li><a href="./" class="active primary-menu__link">Home</a></li>
-               <li><a href="./about/" class="primary-menu__link">About</a></li>
-               <li><a href="./logboek/" class="primary-menu__link">Logboek</a></li>
-               <li><a href="./documentatie/" class="primary-menu__link">Documentatie</a></li>
-            </ul>
-            <div class="nav-overlay"></div>
-         </nav>
-      </div>
+      <nav aria-label="Primary Navigation">
+         <button class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+            aria-controls="primary-menu">
+            <svg class="icon icon-menu" viewBox="0 0 24 24" width="24" height="24">
+               <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg class="icon icon-close" viewBox="0 0 24 24" width="24" height="24">
+               <path d="M6 6l12 12M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+         </button>
+         <ul id="primary-menu" class="primary-menu">
+            <li><a href="./" class="active primary-menu__link">Home</a></li>
+            <li><a href="./about/" class="primary-menu__link">About</a></li>
+            <li><a href="./logboek/" class="primary-menu__link">Logboek</a></li>
+            <li><a href="./documentatie/" class="primary-menu__link">Documentatie</a></li>
+         </ul>
+         <div class="nav-overlay"></div>
+      </nav>
    </header>
    <main>
       <section class="container-hero-bg">
@@ -48,121 +47,219 @@
             <div class="container-hero">
                <div class="hero">
                   <h1>Welkom bij ons project</h1>
-                  <p>Dit project draait rond een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.</p>
+                  <p>Een interactief doolhof dat bestuurd wordt met een draagbare gyroscoop.</p>
                </div>
-               <div class="hero">
-                  <img src="./images/gg.webp" alt="project hero image" class="hero-img">
-               </div>
+               <img src="./images/gg.webp" alt="project hero image">
             </div>
          </div>
       </section>
+
       <section class="container-about-us-bg">
          <div class="container">
-            <div class="container-about-us">
-               <div class="about-us">
-                  <h2>The Team</h2>
+            <div class="team-title">
+               <h2>Team Members</h2>
+            </div>
+
+            <div class="team-cards">
+
+               <div class="team-card">
+                  <div>
+                     <img src="./images/man.webp" alt="photo of wolf">
+                  </div>
+                  <div class="card-content">
+                     <h3>Wolf Van Hende</h3>
+                     <div class="role">Programmer/Hardware</div>
+                  </div>
                </div>
-               <div>
-                  <ul class="about-us-cards">
-                     <li>
-                        <img src="./images/man.webp" alt="photo of wolf" title="photo of wolf">
-                        <div>
-                           <p>Wolf Van Hende</p>
-                           <p>Programmer/Hardware</p>
-                        </div>
-                     </li>
-                     <li>
-                        <img src="./images/man.webp" alt="photo of casimir" title="photo of casimir">
-                        <div>
-                           <p>Casimir De Rycke</p>
-                           <p>Programmer/Hardware</p>
-                        </div>
-                     </li>
-                     <li>
-                        <img src="./images/man.webp" alt="photo of louis" title="photo of louis">
-                        <div>
-                           <p>Louis Haegeman</p>
-                           <p>Programmer/Hardware</p>
-                        </div>
-                     </li>
-                     <li>
-                        <img src="./images/man.webp" alt="photo of alberto" title="photo of alberto">
-                        <div>
-                           <p>Alberto Andronache</p>
-                           <p>Web/Programmer</p>
-                        </div>
-                     </li>
-                     <li>
-                        <img src="./images/man.webp" alt="photo of dylan" title="photo of dylan">
-                        <div>
-                           <p>Dylan de block</p>
-                           <p>Programmer</p>
-                        </div>
-                     </li>
-                  </ul>
+
+               <div class="team-card">
+                  <div>
+                     <img src="./images/man.webp" alt="photo of casimir">
+                  </div>
+                  <div class="card-content">
+                     <h3>Casimir De Rycke</h3>
+                     <div class="role">Programmer/Hardware</div>
+                  </div>
+               </div>
+
+               <div class="team-card">
+                  <div>
+                     <img src="./images/man.webp" alt="photo of louis">
+                  </div>
+                  <div class="card-content">
+                     <h3>Louis Haegeman</h3>
+                     <div class="role">Programmer/Hardware</div>
+                  </div>
+               </div>
+
+               <div class="team-card">
+                  <div>
+                     <img src="./images/man.webp" alt="photo of alberto">
+                  </div>
+                  <div class="card-content">
+                     <h3>Alberto Andronache</h3>
+                     <div class="role">Web/Programmer</div>
+                  </div>
+               </div>
+
+               <div class="team-card">
+                  <div>
+                     <img src="./images/man.webp" alt="photo of dylan">
+                  </div>
+                  <div class="card-content">
+                     <h3>Dylan de block</h3>
+                     <div class="role">Programmer</div>
+                  </div>
                </div>
             </div>
          </div>
       </section>
+
       <section class="container-flowchart-bg">
          <div class="container">
-            <div class="container-flowchart">
-               <div class="flowchart">
+            <div>
+               <div class="flowchart-title">
                   <h2>Flowchart</h2>
                </div>
-               <div class="flowchart">
+               <div class="flowchart-title">
                   <img src="./images/flowchart.png" alt="flowchart image">
                </div>
             </div>
          </div>
       </section>
+
       <section class="container-hardware-software-bg">
          <div class="container">
             <div class="container-hardware-software">
-               <div class="hardware-software-card">
-                  <div class="hardware-software-title">
-                     <h3>Hardware</h3>
+               <div class="hardware-software-title">
+                  <h1>Hardware & Software</h1>
+                  <div class="tabs">
+                     <button class="tab-btn active" data-tab="hardware">Hardware</button>
+                     <button class="tab-btn" data-tab="software">Software</button>
                   </div>
-                  <ul>
-                     <li><strong>Arduino Mega</strong><span class="hardware-software-remove-dash">Main controller</span>
-                     </li>
-                     <li><strong>GY-521 Gyroscope</strong><span class="hardware-software-remove-dash">Motion
-                           detection</span></li>
-                     <li><strong>16x16 LED Panels (x4)</strong><span class="hardware-software-remove-dash">Maze
-                           display</span></li>
-                     <li><strong>7-segmentdisplay</strong><span class="hardware-software-remove-dash">Code
-                           display</span></li>
-                     <li><strong>Infrared Remote Control</strong><span class="hardware-software-remove-dash">Sets the
-                           code</span></li>
-                  </ul>
                </div>
-               <div class="hardware-software-card">
-                  <div class="hardware-software-title">
-                     <h3>Software</h3>
+
+
+               <!-- Hardware Section -->
+               <div class="content-section" id="hardware-section">
+                  <div class="section-title hardware">
+                     <h2>Hardware Components</h2>
                   </div>
-                  <ul>
-                     <li><strong>Arduino ID</strong><span class="hardware-software-remove-dash">Code logic</span></li>
-                     <li><strong>Eagle</strong><span class="hardware-software-remove-dash">Circuit diagram</span></li>
-                     <li><strong>Diagrams.net</strong><span class="hardware-software-remove-dash">Flowchart</span></li>
-                     <li><strong>VScode</strong><span class="hardware-software-remove-dash">Website</span></li>
-                  </ul>
+
+                  <div class="cards-container">
+                     <div class="card hardware">
+                        <div class="card-icon">
+                           <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>Arduino Mega</h3>
+                           <p>Main controller for the entire system, handling all logic and processing.</p>
+                        </div>
+                     </div>
+
+                     <div class="card hardware">
+                        <div class="card-icon">
+                           <i class="fas fa-compass"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>Gyroscope</h3>
+                           <p>Motion detection sensor used for tracking orientation and movement.</p>
+                        </div>
+                     </div>
+
+                     <div class="card hardware">
+                        <div class="card-icon">
+                           <i class="fas fa-border-all"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>16x16 LED Panels (x4)</h3>
+                           <p>Primary display for the maze visualization and game interface.</p>
+                        </div>
+                     </div>
+
+                     <div class="card hardware">
+                        <div class="card-icon">
+                           <i class="fas fa-sort-numeric-up-alt"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>7-Segment Display</h3>
+                           <p>Used to display the code and other numerical information.</p>
+                        </div>
+                     </div>
+
+                     <div class="card hardware">
+                        <div class="card-icon">
+                           <i class="fas fa-tv"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>Infrared Remote Control</h3>
+                           <p>Allows users to set the code</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Software Section -->
+               <div class="content-section hidden" id="software-section">
+                  <div class="section-title software">
+                     <h2>Software Components</h2>
+                  </div>
+
+                  <div class="cards-container">
+                     <div class="card software">
+                        <div class="card-icon">
+                           <i class="fas fa-code"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>Arduino IDE</h3>
+                           <p>The Development environment used for programming the Arduino.</p>
+                        </div>
+                     </div>
+
+                     <div class="card software">
+                        <div class="card-icon">
+                           <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>Eagle</h3>
+                           <p>Used for designing and creating the circuit diagram.</p>
+                        </div>
+                     </div>
+
+                     <div class="card software">
+                        <div class="card-icon">
+                           <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>Diagrams.net</h3>
+                           <p>Tool for creating flowcharts.</p>
+                        </div>
+                     </div>
+
+                     <div class="card software">
+                        <div class="card-icon">
+                           <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="card-content">
+                           <h3>Vscode</h3>
+                           <p>Web development platform used to build the hackathon website.</p>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
       </section>
-      <section class="container-technical-aspects-bg">
+
+      <section class="container-circuit-bg">
          <div class="container">
-            <div class="container-technical-aspects">
-               <div>
-                  <h2>Technical Aspects</h2>
-               </div>
-               <div class="circuit-diagram">
-                  <h3>Circuit diagram</h3>
-                  <img src="./images/circuit_diagram.png" alt="Block diagram">
-               </div>
-               <div>
-                  <h3>💻 Code Snippets</h3>
-                  <img src="" alt="Code Snippets">
+            <div class="circuit-title">
+               <h2>Circuit diagram</h2>
+               <p>Complete schematic of the circuit diagram designed in Eagle</p>
+            </div>
+            <div class="circuit-cards">
+               <div class="circuit-card">
+                  <img src="./images/circuit_diagram.png" alt="Circuit Diagram">
                </div>
             </div>
          </div>
@@ -170,7 +267,7 @@
       <section class="container-how-it-works-bg">
          <div class="container">
             <div class="container-how-it-works">
-               <div>
+               <div class="how-it-works-title">
                   <h2>How it works</h2>
                </div>
                <div class="how-it-works-content">
@@ -193,7 +290,7 @@
                      <ul>
                         <li>Een slow-down knop die de timer vertraagt.</li>
                         <li>Een start/stop knop om het spel te pauzeren of hervatten.</li>
-                        <li>Een random power-up knop die een willekeurige bonus activeert.</li>
+                        <li>Een random kleur knop die van kleur veranderd.</li>
                      </ul>
                   </div>
                </div>
@@ -209,23 +306,17 @@
                <div id="image-carousel" class="splide" aria-label="Beautiful carousel">
                   <div class="splide__track">
                      <ul class="splide__list">
-                        <li class="splide__slide"><img src="./images/3d project_1.png" alt="Slide 1" height="750"
-                              width="900">
+                        <li class="splide__slide"><img src="./images/3d project_1.png" alt="Slide 1">
                         </li>
-                        <li class="splide__slide"><img src="./images/3d project_2.png" alt="Slide 2" height="750"
-                              width="900">
+                        <li class="splide__slide"><img src="./images/3d project_2.png" alt="Slide 2">
                         </li>
-                        <li class="splide__slide"><img src="./images/3d project_3.png" alt="Slide 3" height="750"
-                              width="900">
+                        <li class="splide__slide"><img src="./images/3d project_3.png" alt="Slide 3">
                         </li>
-                        <li class="splide__slide"><img src="./images/3d project_4.png" alt="Slide 4" height="750"
-                              width="900">
+                        <li class="splide__slide"><img src="./images/3d project_4.png" alt="Slide 4">
                         </li>
-                        <li class="splide__slide"><img src="./images/3d project_5.png" alt="Slide 5" height="750"
-                              width="900">
+                        <li class="splide__slide"><img src="./images/3d project_5.png" alt="Slide 5">
                         </li>
-                        <li class="splide__slide"><img src="./images/3d project_6.png" alt="Slide 6" height="750"
-                              width="900">
+                        <li class="splide__slide"><img src="./images/3d project_6.png" alt="Slide 6">
                         </li>
                      </ul>
                   </div>
@@ -249,7 +340,7 @@
       </section>
    </main>
    <footer>
-      <div class="container">
+      <div>
          <nav>
             <ul class="footer-menu">
                <li>
@@ -260,9 +351,7 @@
                </li>
             </ul>
          </nav>
-         <section>
-            <p>© 2025 - all rights go to US</p>
-         </section>
+         <p>© 2025 | all rights go to US</p>
       </div>
    </footer>
    <script src="./js/main.js"></script>

@@ -14,77 +14,87 @@
    <link rel="stylesheet" href="../css/mobile.css">
    <link rel="stylesheet" href="../css/style.css">
 
-   <title>Hackathon</title>
+   <title>About</title>
 </head>
 
 <body>
    <header>
-      <div class="container">
-         <nav aria-label="Primary Navigation">
-            <button class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false"
-               aria-controls="primary-menu">
-               <svg class="icon icon-menu" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" />
-               </svg>
-               <svg class="icon icon-close" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M6 6l12 12M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" />
-               </svg>
-            </button>
-            <ul id="primary-menu" class="primary-menu">
-               <li><a href="../" class="primary-menu__link">Home</a></li>
-               <li><a href="../about/" class="active primary-menu__link">About</a></li>
-               <li><a href="../logboek/" class="primary-menu__link">Logboek</a></li>
-               <li><a href="../documentatie/" class="primary-menu__link">Documentatie</a></li>
-            </ul>
-            <div class="nav-overlay"></div>
-         </nav>
-      </div>
+      <nav aria-label="Primary Navigation">
+         <button class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+            aria-controls="primary-menu">
+            <svg class="icon icon-menu" viewBox="0 0 24 24" width="24" height="24">
+               <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg class="icon icon-close" viewBox="0 0 24 24" width="24" height="24">
+               <path d="M6 6l12 12M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+         </button>
+         <ul id="primary-menu" class="primary-menu">
+            <li><a href="../" class="primary-menu__link">Home</a></li>
+            <li><a href="../about/" class="active primary-menu__link">About</a></li>
+            <li><a href="../logboek/" class="primary-menu__link">Logboek</a></li>
+            <li><a href="../documentatie/" class="primary-menu__link">Documentatie</a></li>
+         </ul>
+         <div class="nav-overlay"></div>
+      </nav>
    </header>
    <main>
       <section class="container-about-us-bg">
          <div class="container">
-            <div class="container-about-us">
-               <div class="about-us">
-                  <h1>The Team</h1>
+            <div class="team-title">
+               <h1>Team Members</h1>
+            </div>
+
+            <div class="team-cards">
+
+               <div class="team-card">
+                  <div>
+                     <img src="../images/man.webp" alt="photo of wolf">
+                  </div>
+                  <div class="card-content">
+                     <h3>Wolf Van Hende</h3>
+                     <div class="role">Programmer/Hardware</div>
+                  </div>
                </div>
-               <div>
-                  <ul class="about-us-cards">
-                     <li>
-                        <img src="../images/man.webp" alt="photo of wolf" title="photo of wolf">
-                        <div>
-                           <p>Wolf Van Hende</p>
-                           <p>Programmer/Hardware</p>
-                        </div>
-                     </li>
-                     <li>
-                        <img src="../images/man.webp" alt="photo of casimir" title="photo of casimir">
-                        <div>
-                           <p>Casimir De Rycke</p>
-                           <p>Programmer/Hardware</p>
-                        </div>
-                     </li>
-                     <li>
-                        <img src="../images/man.webp" alt="photo of louis" title="photo of louis">
-                        <div>
-                           <p>Louis Haegeman</p>
-                           <p>Programmer/Hardware</p>
-                        </div>
-                     </li>
-                     <li>
-                        <img src="../images/man.webp" alt="photo of alberto" title="photo of alberto">
-                        <div>
-                           <p>Alberto Andronache</p>
-                           <p>Web/Programmer</p>
-                        </div>
-                     </li>
-                     <li>
-                        <img src="../images/man.webp" alt="photo of dylan" title="photo of dylan">
-                        <div>
-                           <p>Dylan de block</p>
-                           <p>Programmer</p>
-                        </div>
-                     </li>
-                  </ul>
+
+               <div class="team-card">
+                  <div>
+                     <img src="../images/man.webp" alt="photo of casimir">
+                  </div>
+                  <div class="card-content">
+                     <h3>Casimir De Rycke</h3>
+                     <div class="role">Programmer/Hardware</div>
+                  </div>
+               </div>
+
+               <div class="team-card">
+                  <div>
+                     <img src="../images/man.webp" alt="photo of louis">
+                  </div>
+                  <div class="card-content">
+                     <h3>Louis Haegeman</h3>
+                     <div class="role">Programmer/Hardware</div>
+                  </div>
+               </div>
+
+               <div class="team-card">
+                  <div>
+                     <img src="../images/man.webp" alt="photo of alberto">
+                  </div>
+                  <div class="card-content">
+                     <h3>Alberto Andronache</h3>
+                     <div class="role">Web/Programmer</div>
+                  </div>
+               </div>
+
+               <div class="team-card">
+                  <div>
+                     <img src="../images/man.webp" alt="photo of dylan">
+                  </div>
+                  <div class="card-content">
+                     <h3>Dylan de block</h3>
+                     <div class="role">Programmer</div>
+                  </div>
                </div>
             </div>
          </div>
@@ -103,7 +113,7 @@
             </ul>
          </nav>
          <section class="footer-info">
-            <p>© 2025 - all rights go to US</p>
+            <p>© 2025 | all rights go to US</p>
          </section>
       </div>
    </footer>

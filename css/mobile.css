@@ -26,6 +26,9 @@
   text-align: center;
   padding-block: 0rem 2rem;
 }
+.container-hero-bg .container-hero .hero h1 {
+  margin-block: 0rem 1rem;
+}
 
 /* About us section */
 .container-about-us-bg .team-title {
@@ -84,6 +87,11 @@
 /* Flowchart */
 .container-flowchart-bg {
   padding-block-end: 4rem;
+}
+@media (max-width: 768px) {
+  .container-flowchart-bg {
+    padding-block: 0rem;
+  }
 }
 .container-flowchart-bg .flowchart-title {
   display: flex;

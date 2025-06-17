@@ -16,12 +16,23 @@
       justify-content: center;
       align-items: center;
 
+
       @media (max-width: 768px) {
          padding-block: 5rem 0rem;
       }
 
       & img {
          border-radius: 1rem;
+         width: 60%;
+         max-width: 40rem;
+
+         @media (max-width: 768px) {
+            width: 80%;
+         }
+
+         @media (max-width: 425px) {
+            width: 100%;
+         }
       }
 
       & .hero {
@@ -98,16 +109,14 @@
    }
 }
 
-
-
 /* Flowchart */
 
 .container-flowchart-bg {
    padding-block-end: 4rem;
 
    @media (max-width: 768px) {
-         padding-block: 0rem;
-      }
+      padding-block: 0rem;
+   }
 
    & .flowchart-title {
       display: flex;
@@ -125,8 +134,8 @@
    display: flex;
 
    .container-hardware-software {
-      max-width: 1200px;
-      width: 100%;
+      max-inline-size: 75rem;
+      inline-size: 100%;
       border-radius: 20px;
       overflow: hidden;
       backdrop-filter: blur(10px);
@@ -135,7 +144,8 @@
    }
 
    .hardware-software-title {
-      padding: 1.5rem;
+      padding-inline: 1.5rem;
+      padding-block: 1.5rem;
       text-align: center;
       background: rgba(15, 23, 42, 0.5);
       border-bottom: 1px solid rgba(148, 163, 184, 0.1);
@@ -144,7 +154,7 @@
    .tabs {
       display: flex;
       justify-content: center;
-      margin-top: 1.5rem;
+      margin-block: 1.5rem 0rem;
       gap: 1rem;
    }
 
@@ -187,7 +197,7 @@
    .section-title {
       text-align: center;
       gap: 12px;
-      margin-bottom: 1.5rem;
+      margin-block: 0rem 1.5rem;
    }
 
    .cards-container {
@@ -207,7 +217,6 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       display: flex;
       flex-direction: column;
-      // min-width: 17.5rem;
 
       &:hover {
          transform: translateY(-8px);
@@ -225,7 +234,7 @@
    }
 
    .card-icon {
-      height: 140px;
+      block-size: 9rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -263,7 +272,8 @@
    }
 
    .card-content {
-      padding: 1.8rem;
+      padding-inline: 1.8rem;
+      padding-block: 1.8rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -271,13 +281,13 @@
       h3 {
          font-size: 1.5rem;
          font-weight: 600;
-         margin-bottom: 0.8rem;
+         margin-block: 0rem 0.8rem;
       }
 
       p {
          color: #94a3b8;
          line-height: 1.6;
-         margin-bottom: 1.5rem;
+         margin-block: 0rem 1.5rem;
          flex-grow: 1;
       }
    }
@@ -292,82 +302,43 @@
       }
 
       .tab-btn {
-         padding: 0.5rem 0.8rem;
+         padding-inline: 0.5rem;
+         padding-block: 0.8rem;
          font-size: 1rem;
       }
    }
 }
 
-/* Technical-aspects */
+/* Circuit diagram sectie */
 
 .circuit-cards {
    border: 1px solid #e0e0e0;
    border-radius: 8px;
-   padding: 16px;
+   padding-inline: 1rem;
+   padding-block: 1rem;;
    margin: 20px auto;
-   max-width: 800px;
+   max-inline-size: 50rem;
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
    text-align: center;
    background-color: var(--bg-secondary);
    border: 1px solid rgba(148, 163, 184, 0.1);
 
    & img {
-      max-width: 100%;
-      height: auto;
+      max-inline-size: 100%;
+      inline-size: auto;
       border: 1px solid #eee;
       border-radius: 4px;
    }
 }
 
- .circuit-title {
+.circuit-title {
    text-align: center;
    padding-block: 4rem 1rem;
 
-      & p {
-         color: #7f8c8d;
-      }
-   }
-
-
-
-/* How it works section */
-
-.container-how-it-works-bg {
-   padding-block-end: 4rem;
-
-   .container-how-it-works {
-      text-align: center;
-
-      & .how-it-works-content {
-         text-align: left;
-         padding-block: 2rem 0rem;
-
-         & p {
-            margin: 0.3rem;
-         }
-
-         & ul {
-            padding-inline-start: 3rem;
-            padding-block: 1rem;
-         }
-      }
-   }
-
-   @media (max-width: 768px) {
-      .container-how-it-works {
-
-         & .how-it-works-content {
-            padding-inline: 0rem;
-
-            & p {
-               margin: 0.5rem;
-            }
-         }
-      }
+   & p {
+      color: #7f8c8d;
    }
 }
-
-
 
 /* 3d project section */
 
@@ -405,10 +376,15 @@
       }
 
       & .video-home-demo {
-         inline-size: 100%;
-         max-inline-size: 60rem;
+         inline-size: 90%;
+         max-inline-size: 50rem;
          border-radius: 1rem;
          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+         @media (max-width: 768px) {
+            inline-size: 100%;
+         }
+
       }
    }
 }
@@ -458,7 +434,11 @@
 
    & .documentatie-title {
       text-align: center;
-      padding-block: 2rem;
+      padding-block: 2rem 1rem;
+
+      @media (max-width: 768px) {
+         padding-block: 6rem 1rem;
+      }
    }
 
    & .components_datasheets {
